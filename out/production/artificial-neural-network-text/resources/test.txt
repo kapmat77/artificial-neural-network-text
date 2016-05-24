@@ -1,0 +1,8 @@
+leaf-length leaf-width petal-length petal-width	class
+5,10 3,50 1,40 0,20 Iris-setosa
+4,90 3,00 1,40 0,20 Iris-setosa
+4,70 3,20 1,30 0,20 Iris-setosa
+4,60 3,10 1,50 0,20 Iris-setosa
+5,00 3,60 1,40 0,20 Iris-setosa
+5,40 3,90 1,70 0,40 Iris-setosa
+4,60 3,40 1,40 0,30 Iris-setosa

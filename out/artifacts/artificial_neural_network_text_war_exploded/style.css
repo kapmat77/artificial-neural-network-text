@@ -1,0 +1,214 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2016-05-04, 19:27:36
+    Author     : Kapmat
+*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    background-color: #3D3D3D;
+}
+
+#wrapper {
+    width: 90%;
+    margin: auto;
+    text-align: left;
+    color: #d9d9d9;
+}
+
+p {
+    text-align: left;
+}
+
+.title {
+	display: inline;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.button {
+    /*display: inline;*/
+    color: #fff;
+    background-color: #f2791d;
+    padding: 6px;
+    /*margin: auto;*/
+	margin-left: 5px;
+	/*margin-right: 20px;*/
+	width: 90px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    box-shadow: none;
+    border: none;
+	font-size: 12px;
+}
+
+.buttonGreen {
+    /*display: inline;*/
+    /*color: #000;*/
+    background-color: #00B90C;
+    padding: 6px;
+    /*margin: auto;*/
+	margin-left: 5px;
+	/*margin-right: 20px;*/
+	width: 90px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    box-shadow: none;
+    border: none;
+	font-size: 12px;
+}
+
+
+
+.button:hover {
+    background-color: #ffb15e;
+}
+.button a, a:visited, a:hover, a:active {
+    color: #fff;
+    text-decoration: none;
+}
+
+.buttonGreen:hover {
+    background-color: #66E16F;
+}
+.buttonGreen a, a:visited, a:hover, a:active {
+    color: #fff;
+    text-decoration: none;
+}
+
+#addDevice {
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#addDeviceForm {
+    text-align: left;
+    width: 400px;
+    margin: auto;
+    padding: 10px;
+}
+
+#addDeviceForm span {
+    display: block;
+}
+
+#content {
+	background-color:#fff;
+    margin: auto;
+    width: 90%;
+}
+
+.node {
+    width: 90px;
+    height: 50px;
+    margin: 5px;
+    padding: 5px;
+    color: #fff;
+    vertical-align: top;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    display: inline-block;
+}
+
+.node.off {
+    background-color: #c8cccf;
+}
+
+.node span {
+    display: block;
+}
+
+.nodeName {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.nodeLevel {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.sentenceName {
+	text-align: left;
+    font-weight: bold;
+	font-size: 50px;
+}
+
+.removeDevice {
+    margin-top: 12px;
+    text-align: center;
+}
+
+.node.Sleep {
+    background-color: #5eb85e;
+}
+
+.node.Charge {
+    background-color: #c2a00c;
+}
+
+.node.New {   
+    background-color: #0f90d1;
+}
+
+.device.Electronics a:hover {
+    color: #4badd1;
+}
+
+.device.Lights {
+    background-color: #c2a00c;
+}
+
+.device.Lights a:hover {
+    color: #fad232;
+}
+
+.device.Other {
+    background-color: #db524d;
+}
+
+.device.Other a:hover {
+    color: #ff907d;
+}
+
+.device a {
+    text-decoration: none;
+}
+
+.device a:visited, a:active, a:hover {
+    color: #fff;
+}
+
+.device a:hover {
+    text-decoration: underline;
+}
+
+.animationSentence {
+    color: black;
+    -webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-name: example;
+    animation-duration: 1s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+    from {color: #FFF;}
+    to {color: black;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    from {color: #FFF;}
+    to {color: black;}
+}

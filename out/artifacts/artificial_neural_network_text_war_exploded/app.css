@@ -1,0 +1,82 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2016-05-11, 00:42:13
+    Author     : Kapmat
+*/
+svg {
+  background-color: #FFF;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+svg:not(.active):not(.ctrl) {
+  cursor: crosshair;
+}
+
+path.link {
+  /*fill: none;*/
+  /*stroke: #FFF;*/
+  /*stroke: #FFF700;*/
+  stroke-width: 1px;
+  /*cursor: default;*/
+}
+
+#left { float:left }
+#right { float:right }
+
+path.link:hover {
+	stroke: yellow;
+}
+
+path.nodeLink {
+	stroke: yellow;
+}
+
+svg:not(.active):not(.ctrl) path.link {
+  cursor: pointer;
+}
+
+path.link.selected {
+  stroke-dasharray: 10,2;
+}
+
+path.link.dragline {
+  pointer-events: none;
+}
+
+path.link.hidden {
+  stroke-width: 0;
+}
+
+circle.node {
+	stroke-width: 1.5px;
+  cursor: pointer;
+}
+
+circle.node:hover {
+	stroke-width: 3.5px;
+}
+
+/*circle.node.reflexive {
+  stroke: #000 !important;
+  stroke-width: 1px;
+}*/
+
+text {
+  font: 12px sans-serif;
+  pointer-events: none;
+}
+
+text.id {
+  text-anchor: middle;
+  font-weight: bold;
+}
+

@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="artificial-neural-network-text:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="artificial-neural-network-text/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="artificial-neural-network-text" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="javax.websocket:javax.websocket-api:1.1" />
+          <element id="library" level="project" name="javax.enterprise:cdi-api:1.0" />
+          <element id="library" level="project" name="javax.json-1.0.4" />
+          <element id="library" level="project" name="org.glassfish:javax.json:1.0.4" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
