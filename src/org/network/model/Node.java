@@ -21,6 +21,20 @@ public class Node {
 	private List<Node> bestNeighbours  = new ArrayList<>();
 	private Map<Node, Coefficients> neighCoefficient = new HashMap();
 	private Map<Node, Coefficients> neighActive = new HashMap();
+	private double chargingLevel;
+	private double coeffSum;
+
+	public double getCoeffSum() {
+		return coeffSum;
+	}
+
+	public void setCoeffSum(double coeffSum) {
+		this.coeffSum = coeffSum;
+	}
+
+	public void increaseCoeffSum(double newCoeff) {
+		this.coeffSum = this.coeffSum + newCoeff;
+	}
 
 	public Map<Node, Coefficients> getNeighActive() {
 		return neighActive;
@@ -34,14 +48,24 @@ public class Node {
 		this.neighActive.put(neighbour, coefficient);
 	}
 
-
 	public Node() {
 		this.name = "null";
+		this.level = 0;
+		this.chargingLevel = 0;
 	}
 
 	public Node(String newName) {
 		this.name = newName;
-		level = 1;
+		this.level = 1;
+		this.chargingLevel = 0;
+	}
+
+	public double getChargingLevel() {
+		return chargingLevel;
+	}
+
+	public void setChargingLevel(double chargingLevel) {
+		this.chargingLevel = chargingLevel;
 	}
 
 	public int getId() {
@@ -125,8 +149,6 @@ public class Node {
 		return  str3;
 	}
 	
-	
-	
 	public String getSentenceNeighboursAsString() {
 		String str = "";
 		
@@ -148,7 +170,7 @@ public class Node {
 		return str;
 	}
 	
-	public void setBestNeighboyr(List<Node> best) {
+	public void setBestNeighbours(List<Node> best) {
 		bestNeighbours.addAll(best);
 	}
 

@@ -26,17 +26,17 @@ public class NodeWebSocketServer {
 	private GraphBuilder graphBuilder = new GraphBuilder();
 	
 	@Inject
-	private NodeSessionHandler sessionHandler;
+	private NodeSessionHandler sessionHandler = new NodeSessionHandler();
 	
 	@OnOpen
 	public void open(Session session) {
-		System.out.println("Open Node session...");
+		System.out.println("Open Node session... ID " + session.getId());
 		sessionHandler.addSession(session);
 	}
 
 	@OnClose
 	public void close(Session session) {
-		System.out.println("Close Node session...");
+		System.out.println("Close Node session... ID " + session.getId());
 		sessionHandler.removeSession(session);
 	}
 
@@ -71,35 +71,6 @@ public class NodeWebSocketServer {
 				case "resetLines":
 					sessionHandler.resetLines();
 			}
-			
-			
-//				for (int i = 0; i < 2; i++) {
-//					Device device = new Device();
-//					device.setName(i + "Monkey" + i);
-//					device.setLevel(i);
-//					Thread.sleep(1000);
-//					sessionHandler.addNode(device);
-//				}
-			
-
-//			if ("remove".equals(jsonMessage.getString("action"))) {
-//				int id = (int) jsonMessage.getInt("id");
-//				sessionHandler.removeNode(id);
-//			}
-
-//			if ("stop".equals(jsonMessage.getString("action"))) {
-////                int id = (int) jsonMessage.getInt("id");
-////                sessionHandler.removeDevice(id);
-//			}
-//
-//			if ("update".equals(jsonMessage.getString("action"))) {
-//				sessionHandler.toggleNode(1);
-//			}
-//			
-//			if ("toggle".equals(jsonMessage.getString("action"))) {
-////                int id = (int) jsonMessage.getInt("id");
-////                sessionHandler.toggleDevice("1Monkey1");
-//			}
 		}
 	}
 }

@@ -29,9 +29,6 @@ var svg = d3.select('body')
     .style('background', "#ACACAC");
 
 
-var index = 9;
-var action = "add";
-
 var nodes = [],
     links = [];
 
@@ -43,15 +40,10 @@ var path = svg.append('svg:g').selectAll('path'),
 // mouse event vars
 var selected_node = null,
     selected_link = null;
-//    mousedown_link = null;
-//    mousedown_node = null,
-//    mouseup_node = null;
 
 var currentNode;
 
 function refresh() {
-//	path = svg.append('svg:g').selectAll('path');
-//	circle = svg.append('svg:g').selectAll('g');
 	
 	    force = d3.layout.force()
         .nodes(nodes)
@@ -87,8 +79,6 @@ function onMessage(event) {
             break;
         case "removeSentence":
 			printRemoveSentence(object);
-//			document.getElementById(object.id).remove();
-//			object.parentNode.removeChild(object);
             break;
         case "update":
             printUpdatedNode(object);
@@ -184,12 +174,10 @@ function printAddLines(node) {
 			links = links.concat(
 				{id:lookup[node.name].name+lookup[neigh[i]].name, name:lookup[node.name].name, source: lookup[node.name], target: lookup[neigh[i]], coeff: coeff[i],left: false, right: true}
 			);
-//			console.log(lookup[node.name].name+lookup[neigh[i]].name);
 			restart("addLine", lookup[node.name].name+lookup[neigh[i]].name)
 		}
 	}
 
-//restart("addLine");
 }
 
 function printResetLines(nodes) {
@@ -229,10 +217,6 @@ function printNewSentenceElement(sentence) {
 
 function printAddWordToSentence(word) {
     var sentenceHTML = document.getElementById("sentenceHTML");
-
-//    var sentenceDiv = document.createElement("div");
-//    sentenceDiv.setAttribute("id", word.id);
-//    sentenceHTML.appendChild(sentenceDiv);
 
 	var sentenceDiv = document.getElementById(word.id);
 	sentenceHTML.appendChild(sentenceDiv);
@@ -306,8 +290,6 @@ function tick() {
 	circle.attr("cx", function(d) { return d.x = Math.max(radius, Math.min(width - radius, d.x)); })
         .attr("cy", function(d) { return d.y = Math.max(radius, Math.min(height - radius, d.y)); });
 
-//	coeff.attr("cx", function(d) { return d.x; })
-//		.attr("cy", function(d) { return d.y; });
 	coeff.attr("cx", function(d) { return d.x; })
 		.attr("cy", function(d) { return d.y; });
 	
@@ -390,8 +372,6 @@ function restart(action, idPath) {
 	
 		//COEFF !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-		
-	
 //		var a = 0;
 //		a = 1 (function(d) {return d.coeff; }) + 1;
 //		if(function(d) { a = d.coeff; return d.coeff; } > 1) {
@@ -499,18 +479,14 @@ function restart(action, idPath) {
             .style('font-size', levelSize)
             .style('fill', "black")
                   .text(function(d) { return d.level; });
-//            .text(index);
-        index++;
-//  // remove old nodes
+
+//   remove old nodes
         circle.exit().remove();
 
         // set the graph in motion
         force.start();
 
     } else if (action === "update") {
-
-//		var pathName = document.getElementById("path"+name);
-//		pathName.style.stroke = lineActiveColor;
 		
 		var name = '';
 		if (currentNode!==undefined) {
@@ -585,13 +561,7 @@ function restart(action, idPath) {
 		
 		var textnode = document.getElementById("nodeLevel"+name);
 		textnode.textContent = currentNode.level;
-		
-		
-		
-        // set the graph in motion
-//        force.start();
-		
-//		refresh();
+
     } else if (action==="updateLine") {
 		
 		var name = '';
@@ -599,128 +569,33 @@ function restart(action, idPath) {
 			name = currentNode.name;
 		}
 			
-//			var result = links.filter(function( obj ) {
-////				return obj.name === currentNode.name;
-//				return (obj.source.name === currentNode.name) || (obj.target.name === currentNode.name);
-//			});
-//			
-////			console.log(result);
-//			
-//			var re = result.filter(function( obj ) {
-////				return obj.name === currentNode.name;
-//				return (obj.source.name === currentNode.name);
-//			});
-//			
-////			console.log(re);
-//			
-//			var goodNodes = result.filter(function(item) {
-//				return re.indexOf(item) === -1;
-//			});
-//			
-////			console.log(goodNodes);
-//			
-//			var paths = [];
-//			for(var i=0; i<goodNodes.length; i++) {
-//				var rest = result.filter(function( obj ) {
-//					return (obj.target.name === goodNodes[i].source.name) && (obj.source.name === goodNodes[i].target.name);
-//				});
-//				for(var j=0; j<rest.length; j++) {
-//					paths.push(rest[j]);
-//				}	
-//			}
-//			
-//			for(var k=0; k<goodNodes.length; k++) {
-//				paths.push(goodNodes[k]);
-//			}	
-			
 			var neigh = currentNode.neighbours.split(" ");
-//			console.log(neigh);
 			for(var i=1; i<neigh.length; i++) {
-//				var singlePath = document.getElementById("path" + paths[i].id);
-//				console.log(neigh[i]);
 				var singlePath = document.getElementById("path" + neigh[i] + currentNode.name);
-//				var singlePath = document.getElementById("pathVERYCLEVER");
 				singlePath.style.stroke="yellow";
 				singlePath.style['stroke-width']="6px";
-				(function(capturedI) {
-					setTimeout(function(){ 
-						var sPath = document.getElementById("path" + neigh[capturedI] + currentNode.name);
-//						
-//						console.log(neigh[capturedI] + currentNode.name);
-						sPath.style.stroke="#000";
-						sPath.style['stroke-width']="1px";}, 1500);
-				
-				})(i);
+				// (function(capturedI) {
+				// 	setTimeout(function(){
+				// 		var sPath = document.getElementById("path" + neigh[capturedI] + currentNode.name);
+				// 		sPath.style.stroke="#000";
+				// 		sPath.style['stroke-width']="1px";}, 1500);
+				//
+				// })(i);
 			
 			}
-//			for(var i=0; i<paths.length; i++) {
-//				
-////				console.log(pathName);
-//				setTimeout(function(){ 
-//					var singlePath = document.getElementById("path" + paths[i].id);
-//					singlePath.style.stroke="#000";
-//					singlePath.style['stroke-width']="2px";
-//									}, 500);
-//								}
-//			result[0].style.stroke = "#000";
-//			result[1].style.stroke = "#FFF";
-//			result[2].style.stroke = "#ABC";
-			
-			
-			
 	} else if (action === "updateBestLine") {
 				var name = '';
 		if (currentNode!==undefined) {
 			name = currentNode.name;
 		}
-			
-//			var result = links.filter(function( obj ) {
-////				return obj.name === currentNode.name;
-//				return (obj.source.name === currentNode.name) || (obj.target.name === currentNode.name);
-//			});
-//			
-////			console.log(result);
-//			
-//			var re = result.filter(function( obj ) {
-////				return obj.name === currentNode.name;
-//				return (obj.source.name === currentNode.name);
-//			});
-//			
-////			console.log(re);
-//			
-//			var goodNodes = result.filter(function(item) {
-//				return re.indexOf(item) === -1;
-//			});
-//			
-////			console.log(goodNodes);
-//			
-//			var paths = [];
-//			for(var i=0; i<goodNodes.length; i++) {
-//				var rest = result.filter(function( obj ) {
-//					return (obj.target.name === goodNodes[i].source.name) && (obj.source.name === goodNodes[i].target.name);
-//				});
-//				for(var j=0; j<rest.length; j++) {
-//					paths.push(rest[j]);
-//				}	
-//			}
-//			
-//			for(var k=0; k<goodNodes.length; k++) {
-//				paths.push(goodNodes[k]);
-//			}	
-			
 			var neigh = currentNode.neighbours.split(" ");
-//			console.log(neigh);
 			for(var i=1; i<neigh.length; i++) {
-//				var singlePath = document.getElementById("path" + paths[i].id);
-//				console.log(neigh[i]);
 				var singlePath = document.getElementById("path" + neigh[i] + currentNode.name);
-//				var singlePath = document.getElementById("pathVERYCLEVER");
 				singlePath.style.stroke="red";
 				singlePath.style['stroke-width']="8px";
 				(function(capturedI) {
 					setTimeout(function(){ 
 						var sPath = document.getElementById("path" + neigh[capturedI] + currentNode.name);
-//						console.log(neigh[capturedI] + currentNode.name);
 						sPath.style.stroke="#000";
 						sPath.style['stroke-width']="1px";}, 5000);
 				
@@ -730,61 +605,29 @@ function restart(action, idPath) {
 	} else if(action==="resetLines") {
 			var result = links.filter(function( obj ) {
 				return obj.name;
-//				return (obj.source.name === currentNode.name) || (obj.target.name === currentNode.name);
 			});
-//			alert(document.getElementById("selectedWord").value);
-//			console.log(neigh);
 			for(var i=0; i<result.length; i++) {
-//				var singlePath = document.getElementById("path" + paths[i].id);
-//				console.log(neigh[i]);
 				var singlePath = document.getElementById("path" + result[i].id);
-//				var singlePath = document.getElementById("pathVERYCLEVER");
-				console.log(result[i].id);
 				singlePath.style.stroke="000";
 				singlePath.style['stroke-width']="1px";
 			}
 	}
 }
 
-// only respond once per keydown
-var lastKeyDown = -1;
-
-function keydown() {
-    d3.event.preventDefault();
-
-    if (lastKeyDown !== -1) return;
-    lastKeyDown = d3.event.keyCode;
-
-    // ctrl
-    if (d3.event.keyCode === 17) {
-        circle.call(force.drag);
-        svg.classed('ctrl', true);
-    }
-	
-	if (d3.event.keyCode === 82) {
-		refresh();
-	}
-}
-
 function keyup() {
-    lastKeyDown = -1;
+	var lastKeyDown = -1;
 
-    // ctrl
-    if (d3.event.keyCode === 17) {
-        circle
-            .on('mousedown.drag', null)
-            .on('touchstart.drag', null);
-        svg.classed('ctrl', false);
-    }
-	
+	// ctrl
+	if (d3.event.keyCode === 17) {
+		circle.call(force.drag);
+		svg.classed('ctrl', true);
+	}
+
 	if (d3.event.keyCode === 82) {
 		refresh();
 	}
 }
 
 d3.select(window)
-    .on('keydown', keydown)
-  .on('keyup', keyup);
-//restart("add");
-//refresh();
+	.on('keyup', keyup);
 

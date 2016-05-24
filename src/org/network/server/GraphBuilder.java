@@ -23,6 +23,9 @@ public class GraphBuilder {
 	private List<Node> neuralList = new ArrayList<>();
 	private String coeffString = ""; 
 	private int DELAY = 100;
+	private double alfa = 0.7;
+	private double beta = 0.8;
+	private double teta = 1;
 
 	public void buildGraph(String data, String activeWord, NodeSessionHandler sessionHandler,
 			String speed) throws InterruptedException {
@@ -56,9 +59,9 @@ public class GraphBuilder {
 				break;
 			case "10":
 				DELAY = 10;
-				break;	
+				break;
 		}
-		
+
 		if (data.equals("update")) {
 			String activeNeuron = activeWord;
 			sendAddSentenceJson(sessionHandler, "");
@@ -66,39 +69,47 @@ public class GraphBuilder {
 //			sendUpdateLinesJson(sessionHandler, neuron);
 			sessionHandler.resetLines();
 			Thread.sleep(100);
-			
+
 //			activeNeuron = "E4";
-			
+
 			findNodes(activeNeuron, sessionHandler, true);
+
+			for (Node node: neuralList) {
+				System.out.println(node.getName() + " -> " + node.getCoeffSum());
+			}
 		} else {
-			
+
 			FileOperations file = new FileOperations();
 
 			List<Sentence> inputSentences = file.readDataFromFile("C:\\Users\\Kapmat\\Desktop\\Java projects\\NetBeans_Projects\\WebsocketGraph\\src\\java\\Resources\\" + data);
-			
+
 //			List<Sentence> inputSentences = new ArrayList<>();
 			Sentence sentence = new Sentence();
 			sentence.addWord("E2");
 			sentence.addWord("E8");
 //			inputSentences.add(sentence);
-			
+
 //			inputSentences.add(sentence);
-			
+
 			createGraph(inputSentences, sessionHandler);
 		}
 
 	}
-	
+
 	private void findNodes(String activeNeuron, NodeSessionHandler sessionHandler, boolean firstNode) throws InterruptedException {
 		activeNeuron = activeNeuron.toUpperCase();
 		Node neuron = findNodeByName(activeNeuron);
-		
-		
+
 		if (firstNode) {
-			sendActiveNeuronJson(sessionHandler, neuron);
-			sendUpdateSentenceJson(sessionHandler, neuron.getName());
+//			if(neuron.getCoeffSum()>=1) {
+			neuron.setCoeffSum(1);
+				sendActiveNeuronJson(sessionHandler, neuron);
+				sendUpdateSentenceJson(sessionHandler, neuron.getName());
+//			}
 //			sendUpdateLinesJson(sessionHandler, neuron);
 //			sendUpdateBestLineJson(sessionHandler, neuron);
+		} else {
+//			neuron.setCoeffSum();
 		}
 
 		List<Node> bestNeigh = new ArrayList<>();
@@ -122,24 +133,28 @@ public class GraphBuilder {
 				bestNeigh.add(bestNode);
 			}
 		}
-		
-		neuron.setBestNeighboyr(bestNeigh);
-		
+
+		neuron.setBestNeighbours(bestNeigh);
+
 		if (bestCoeff!=0.0) {
 			sendUpdateLinesJson(sessionHandler, neuron);
 			Thread.sleep(1600);
 			sendUpdateBestLineJson(sessionHandler, neuron);
-//			Thread.sleep(2000);
+
+			//Increase coeffSum
+			for (Map.Entry<Node,Coefficients> entry: neuron.getNeighCoefficient().entrySet()) {
+				entry.getKey().increaseCoeffSum(entry.getValue().getSynapticWeight());
+			}
+
 			for(Node node: bestNeigh) {
 				sendActiveNeuronJson(sessionHandler, node);
 				sendUpdateSentenceJson(sessionHandler, node.getName());
-				
 			}
 			for(Node node: bestNeigh) {
 				findNodes(node.getName(), sessionHandler, false);
 			}
-			
-		}	
+
+		}
 	}
 
 	private void createGraph(List<Sentence> inputSentences, NodeSessionHandler sessionHandler) throws InterruptedException {
@@ -232,6 +247,19 @@ public class GraphBuilder {
 		return new Node();
 	}
 
+	private void updateChargingLevel(Node node) {
+		double minusPart = 0;
+		if (node.getChargingLevel()<0) {
+			minusPart = alfa*node.getChargingLevel()+((alfa-1)*beta*Math.pow(node.getChargingLevel(),2))/teta;
+		} else if (node.getChargingLevel()>=0 && node.getChargingLevel()<teta) {
+			minusPart = alfa*node.getChargingLevel()+((alfa-1)*beta*Math.pow(node.getChargingLevel(),2))/teta;
+		} else if (node.getChargingLevel()>=teta) {
+			minusPart = alfa*node.getChargingLevel()+((alfa-1)*beta*Math.pow(node.getChargingLevel(),2))/teta;
+		}
+		double chLevel = node.getCoeffSum() - minusPart;
+		node.setChargingLevel(chLevel);
+	}
+
 	private void sendAddNodeJson(NodeSessionHandler sessionHandler, Node node) throws InterruptedException {
 		sessionHandler.addNode(node);
 		Thread.sleep(DELAY);
@@ -273,7 +301,5 @@ public class GraphBuilder {
 		sessionHandler.updateBestLine(node);
 		Thread.sleep(DELAY);
 	}
-
-
 }
 
