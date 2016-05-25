@@ -77,6 +77,14 @@ public class NodeSessionHandler {
 				.build();
 		sendToAllConnectedSessions(updateNode);
 	}
+
+	public void resetNodes() {
+		JsonProvider provider = JsonProvider.provider();
+		JsonObject updateNode = provider.createObjectBuilder()
+				.add("action", "resetNodes")
+				.build();
+		sendToAllConnectedSessions(updateNode);
+	}
 	
 	public void updateBestLine(Node node) {
 		JsonProvider provider = JsonProvider.provider();
@@ -91,13 +99,14 @@ public class NodeSessionHandler {
 		sendToAllConnectedSessions(updateNode);
 	}
 	
-	public void activeNeuron(Node node) {
+	public void activeNeuron(Node node, String color) {
 		JsonProvider provider = JsonProvider.provider();
 		JsonObject sentenceAddMsg = provider.createObjectBuilder()
 				.add("action", "activeNeuron")
 				.add("id", node.getId())
 				.add("level", node.getLevel())
 				.add("name", node.getName())
+				.add("color", color)
 				.build();
 		sendToAllConnectedSessions(sentenceAddMsg);
 	}
@@ -159,6 +168,7 @@ public class NodeSessionHandler {
 				.add("level", node.getLevel())
 				.add("name", node.getName())
 				.add("neighbours", node.getNeighboursAsString())
+				.add("chargeLevel", node.getChargingLevel())
 				.build();
 		return addNode;
 	}
@@ -186,24 +196,48 @@ public class NodeSessionHandler {
 				.add("id", node.getId())
 				.add("level", node.getLevel())
 				.add("name", node.getName())
+				.add("chargeLevel", node.getChargingLevel())
 				.build();
 		sendToAllConnectedSessions(updateMessage);
 	}
 	
 	private void removeNodeJson(int id) {
-		
+
 	}
-	
+
+	public void updateChargeLevel(Node node) {
+		JsonProvider provider = JsonProvider.provider();
+		JsonObject updateMessage = provider.createObjectBuilder()
+				.add("action", "updateCharge")
+				.add("id", node.getId())
+				.add("level", node.getLevel())
+				.add("name", node.getName())
+				.add("chargeLevel", ClockUpdater.roundDouble(node.getChargingLevel()))
+				.build();
+		sendToAllConnectedSessions(updateMessage);
+	}
+
+	public void updateTimer(double clock) {
+		JsonProvider provider = JsonProvider.provider();
+		JsonObject updateMessage = provider.createObjectBuilder()
+				.add("action", "updateTimer")
+				.add("clock", clock)
+				.build();
+		sendToAllConnectedSessions(updateMessage);
+	}
+
 	private void sendToAllConnectedSessions(JsonObject message) {
 		for (Object session : sessions) {
 			sendToSession((Session)session, message);
 		}
     }
-	
+
 	private void sendToSession(Session session, JsonObject message) {
 		try {
-			System.out.println("JSON Java->JS: " + message.toString());
-			session.getBasicRemote().sendText(message.toString());
+			synchronized(this) {
+//				System.out.println("JSON Java->JS: " + message.toString());
+				session.getBasicRemote().sendText(message.toString());
+			}
 		} catch (IOException ex) {
 			sessions.remove(session);
 			Logger.getLogger(NodeSessionHandler.class.getName()).log(Level.SEVERE, null, ex);

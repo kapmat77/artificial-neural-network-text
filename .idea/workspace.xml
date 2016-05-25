@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06bc3721-df25-4372-981d-4c7e118d41ba" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/WEB-INF/classes/org/network/model/Device.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/artificial-neural-network-text/org/network/model/Device.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/WEB-INF/classes/org/network/model/Coefficients.class" afterPath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/WEB-INF/classes/org/network/model/Coefficients.class" />
+    <list default="true" id="06bc3721-df25-4372-981d-4c7e118d41ba" name="Default" comment="Commit before active changes !">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/network/server/ChargeUpdater.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/network/server/ClockUpdater.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/network/server/JsonSender.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/WEB-INF/classes/org/network/model/Node.class" afterPath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/WEB-INF/classes/org/network/model/Node.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/WEB-INF/classes/org/network/server/GraphBuilder.class" afterPath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/WEB-INF/classes/org/network/server/GraphBuilder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/WEB-INF/classes/org/network/server/NodeSessionHandler.class" afterPath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/WEB-INF/classes/org/network/server/NodeSessionHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/WEB-INF/classes/org/network/server/NodeWebSocketServer.class" afterPath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/WEB-INF/classes/org/network/server/NodeWebSocketServer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/artificial-neural-network-text/org/network/model/Coefficients.class" afterPath="$PROJECT_DIR$/out/production/artificial-neural-network-text/org/network/model/Coefficients.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/artificial-neural-network-text/org/network/model/Node.class" afterPath="$PROJECT_DIR$/out/production/artificial-neural-network-text/org/network/model/Node.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/artificial-neural-network-text/org/network/server/GraphBuilder.class" afterPath="$PROJECT_DIR$/out/production/artificial-neural-network-text/org/network/server/GraphBuilder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/artificial-neural-network-text/org/network/server/NodeSessionHandler.class" afterPath="$PROJECT_DIR$/out/production/artificial-neural-network-text/org/network/server/NodeSessionHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/artificial-neural-network-text/org/network/server/NodeWebSocketServer.class" afterPath="$PROJECT_DIR$/out/production/artificial-neural-network-text/org/network/server/NodeWebSocketServer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/artificial-neural-network-text.iml" afterPath="$PROJECT_DIR$/artificial-neural-network-text.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/WEB-INF/classes/resources/test.txt" afterPath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/WEB-INF/classes/resources/test.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/index.html" afterPath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/websocket.js" afterPath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/websocket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/artificial-neural-network-text/resources/test.txt" afterPath="$PROJECT_DIR$/out/production/artificial-neural-network-text/resources/test.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/network/model/Node.java" afterPath="$PROJECT_DIR$/src/org/network/model/Node.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/network/server/GraphBuilder.java" afterPath="$PROJECT_DIR$/src/org/network/server/GraphBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/network/server/NodeSessionHandler.java" afterPath="$PROJECT_DIR$/src/org/network/server/NodeSessionHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/network/server/NodeWebSocketServer.java" afterPath="$PROJECT_DIR$/src/org/network/server/NodeWebSocketServer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/test.txt" afterPath="$PROJECT_DIR$/src/resources/test.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.html" afterPath="$PROJECT_DIR$/web/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/websocket.js" afterPath="$PROJECT_DIR$/web/websocket.js" />
     </list>
@@ -43,104 +48,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="websocket.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/websocket.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="582" column="25" selection-start-line="582" selection-start-column="25" selection-end-line="582" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="115" column="58" selection-start-line="115" selection-start-column="58" selection-end-line="115" selection-end-column="58" />
+            <state relative-caret-position="382">
+              <caret line="125" column="30" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="30" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#a#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#a#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#a#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#textarea#0;n#div#5;n#a#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#6;n#a#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#6;n#a#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#6;n#a#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#6;n#a#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#2;n#div#6;n#a#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#6;n#a#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#4;n#div#6;n#a#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#5;n#div#6;n#a#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1464083392777" expanded="true" signature="4119:4413" ph="..." />
+                <element signature="n#style#0;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#6;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#0;n#div#7;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#2;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#4;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#5;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Node.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/network/model/Node.java">
+      <file leaf-file-name="websocket.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/websocket.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="172" column="33" selection-start-line="172" selection-start-column="16" selection-end-line="172" selection-end-column="33" />
-              <folding>
-                <element signature="e#689#690#0" expanded="true" />
-                <element signature="e#711#712#0" expanded="true" />
-                <element signature="e#756#757#0" expanded="true" />
-                <element signature="e#787#788#0" expanded="true" />
-                <element signature="e#837#838#0" expanded="true" />
-                <element signature="e#884#885#0" expanded="true" />
-                <element signature="e#936#937#0" expanded="true" />
-                <element signature="e#961#962#0" expanded="true" />
-                <element signature="e#1417#1418#0" expanded="true" />
-                <element signature="e#1444#1445#0" expanded="true" />
-                <element signature="e#1499#1500#0" expanded="true" />
-                <element signature="e#1540#1541#0" expanded="true" />
-                <element signature="method#getCoeffAsString#0;class#Node#0" expanded="false" />
-                <element signature="method#getNeighboursAsString#0;class#Node#0" expanded="false" />
-                <element signature="method#getAnotherNeighboursAsString#0;class#Node#0" expanded="false" />
-                <element signature="method#getSentenceNeighboursAsString#0;class#Node#0" expanded="false" />
-                <element signature="method#getStringBestNeighbour#0;class#Node#0" expanded="false" />
-                <element signature="e#3574#3575#0" expanded="true" />
-                <element signature="e#3608#3609#0" expanded="true" />
-                <element signature="method#addNeighbour#0;class#Node#0" expanded="false" />
-                <element signature="e#3790#3817#0" expanded="false" />
-                <element signature="e#4126#4153#0" expanded="false" />
-                <element signature="method#addSentenceNeighbour#0;class#Node#0" expanded="false" />
-                <element signature="e#4543#4570#0" expanded="false" />
-                <element signature="method#getCoefficient#0;class#Node#0" expanded="false" />
-                <element signature="method#updateCoefficients#0;class#Node#0" expanded="false" />
-                <element signature="method#addNeighCoefficient#0;class#Node#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GraphBuilder.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/org/network/server/GraphBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="93" column="56" selection-start-line="93" selection-start-column="56" selection-end-line="93" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="monkey.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/monkey.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NodeSessionHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/network/server/NodeSessionHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2590">
-              <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+            <state relative-caret-position="290">
+              <caret line="668" column="9" selection-start-line="668" selection-start-column="9" selection-end-line="668" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -149,18 +86,107 @@
       <file leaf-file-name="NodeWebSocketServer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/network/server/NodeWebSocketServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="38" column="74" selection-start-line="38" selection-start-column="74" selection-end-line="38" selection-end-column="74" />
+            <state relative-caret-position="408">
+              <caret line="73" column="38" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Coefficients.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/network/model/Coefficients.java">
+      <file leaf-file-name="Node.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/network/model/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="289">
+              <caret line="71" column="64" selection-start-line="71" selection-start-column="64" selection-end-line="71" selection-end-column="64" />
+              <folding>
+                <element signature="e#1503#1504#0" expanded="true" />
+                <element signature="e#1544#1545#0" expanded="true" />
+                <element signature="e#1604#1605#0" expanded="true" />
+                <element signature="e#1666#1667#0" expanded="true" />
+                <element signature="method#getCoeffAsString#0;class#Node#0" expanded="false" />
+                <element signature="method#getNeighboursAsString#0;class#Node#0" expanded="false" />
+                <element signature="method#getAnotherNeighboursAsString#0;class#Node#0" expanded="false" />
+                <element signature="method#getSentenceNeighboursAsString#0;class#Node#0" expanded="false" />
+                <element signature="method#getStringBestNeighbour#0;class#Node#0" expanded="false" />
+                <element signature="method#addNeighbour#0;class#Node#0" expanded="false" />
+                <element signature="e#3916#3943#0" expanded="false" />
+                <element signature="e#4252#4279#0" expanded="false" />
+                <element signature="method#addSentenceNeighbour#0;class#Node#0" expanded="false" />
+                <element signature="e#4669#4696#0" expanded="false" />
+                <element signature="method#getCoefficient#0;class#Node#0" expanded="false" />
+                <element signature="method#updateCoefficients#0;class#Node#0" expanded="false" />
+                <element signature="method#addNeighCoefficient#0;class#Node#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NodeSessionHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/network/server/NodeSessionHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1349">
+              <caret line="230" column="0" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GraphBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/network/server/GraphBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-407">
+              <caret line="164" column="31" selection-start-line="164" selection-start-column="31" selection-end-line="164" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#createGraph#0;class#GraphBuilder#0" expanded="false" />
+                <element signature="method#setConnections#0;class#GraphBuilder#0" expanded="false" />
+                <element signature="method#countCoefficients#0;class#GraphBuilder#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JsonSender.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/network/server/JsonSender.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="251">
+              <caret line="115" column="30" selection-start-line="115" selection-start-column="30" selection-end-line="115" selection-end-column="30" />
+              <folding>
+                <element signature="method#setSpeed#0;class#JsonSender#0" expanded="false" />
+                <element signature="e#3111#3112#0" expanded="true" />
+                <element signature="e#3165#3166#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClockUpdater.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/network/server/ClockUpdater.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="13">
+              <caret line="46" column="63" selection-start-line="46" selection-start-column="63" selection-end-line="46" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChargeUpdater.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/network/server/ChargeUpdater.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="277">
+              <caret line="109" column="27" selection-start-line="109" selection-start-column="27" selection-end-line="109" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/test.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="2272" selection-start-line="10" selection-start-column="2272" selection-end-line="10" selection-end-column="2272" />
               <folding />
             </state>
           </provider>
@@ -172,10 +198,16 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Mateusz Kapron &lt;kapmat77@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -188,13 +220,18 @@
       <list>
         <option value="$PROJECT_DIR$/web/hello.jsp" />
         <option value="$PROJECT_DIR$/web/app.css" />
-        <option value="$PROJECT_DIR$/src/org/network/server/NodeSessionHandler.java" />
         <option value="$PROJECT_DIR$/src/org/network/model/Coefficients.java" />
-        <option value="$PROJECT_DIR$/src/org/network/server/NodeWebSocketServer.java" />
         <option value="$PROJECT_DIR$/web/index.html" />
+        <option value="$PROJECT_DIR$/src/resources/test.txt___jb_tmp___" />
+        <option value="$PROJECT_DIR$/src/resources/test.txt" />
+        <option value="$PROJECT_DIR$/src/org/network/server/NodeWebSocketServer.java" />
+        <option value="$PROJECT_DIR$/src/org/network/server/ClockUpdater.java" />
         <option value="$PROJECT_DIR$/src/org/network/model/Node.java" />
+        <option value="$PROJECT_DIR$/src/org/network/server/JsonSender.java" />
+        <option value="$PROJECT_DIR$/src/org/network/server/NodeSessionHandler.java" />
         <option value="$PROJECT_DIR$/web/websocket.js" />
         <option value="$PROJECT_DIR$/src/org/network/server/GraphBuilder.java" />
+        <option value="$PROJECT_DIR$/src/org/network/server/ChargeUpdater.java" />
       </list>
     </option>
   </component>
@@ -219,10 +256,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1358" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="754" />
+    <option name="width" value="1616" />
+    <option name="height" value="886" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -346,6 +383,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -460,9 +500,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1147,20 +1184,31 @@
       <option name="presentableId" value="Default" />
       <updated>1464039748295</updated>
       <workItem from="1464039755353" duration="4947000" />
-      <workItem from="1464072006220" duration="9356000" />
+      <workItem from="1464072006220" duration="21518000" />
+      <workItem from="1464166633696" duration="11608000" />
+      <workItem from="1464181625987" duration="1949000" />
+      <workItem from="1464191714823" duration="5589000" />
     </task>
+    <task id="LOCAL-00001" summary="Commit before active changes !">
+      <created>1464088727484</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1464088727484</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14303000" />
+    <option name="totallyTimeSpent" value="45611000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="1358" y="-8" width="1616" height="886" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19254659" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38402063" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1169,11 +1217,11 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3726708" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43012422" sideWeight="0.658125" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44329897" sideWeight="0.658125" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18667643" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.159375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32763976" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1181,7 +1229,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4347826" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41365978" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1200,27 +1248,18 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Commit before active changes !" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit before active changes !" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/org/network/server/GraphBuilder.java</url>
-          <line>100</line>
-          <properties />
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/org/network/server/GraphBuilder.java</url>
-          <line>148</line>
-          <properties />
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="10" />
+      <option name="time" value="20" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
         <watch expression="neuralList" />
+        <watch expression="node" />
       </configuration>
     </watches-manager>
   </component>
@@ -1229,13 +1268,207 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/org/network/model/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+          <folding>
+            <element signature="e#1503#1504#0" expanded="true" />
+            <element signature="e#1544#1545#0" expanded="true" />
+            <element signature="e#1604#1605#0" expanded="true" />
+            <element signature="e#1666#1667#0" expanded="true" />
+            <element signature="method#getCoeffAsString#0;class#Node#0" expanded="false" />
+            <element signature="method#getNeighboursAsString#0;class#Node#0" expanded="false" />
+            <element signature="method#getAnotherNeighboursAsString#0;class#Node#0" expanded="false" />
+            <element signature="method#getSentenceNeighboursAsString#0;class#Node#0" expanded="false" />
+            <element signature="method#getStringBestNeighbour#0;class#Node#0" expanded="false" />
+            <element signature="method#addNeighbour#0;class#Node#0" expanded="false" />
+            <element signature="e#3916#3943#0" expanded="false" />
+            <element signature="e#4252#4279#0" expanded="false" />
+            <element signature="method#addSentenceNeighbour#0;class#Node#0" expanded="false" />
+            <element signature="e#4669#4696#0" expanded="false" />
+            <element signature="method#getCoefficient#0;class#Node#0" expanded="false" />
+            <element signature="method#updateCoefficients#0;class#Node#0" expanded="false" />
+            <element signature="method#addNeighCoefficient#0;class#Node#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/network/server/NodeSessionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="72" column="16" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/network/server/GraphBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1751">
+          <caret line="113" column="42" selection-start-line="113" selection-start-column="42" selection-end-line="113" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#createGraph#0;class#GraphBuilder#0" expanded="false" />
+            <element signature="method#setConnections#0;class#GraphBuilder#0" expanded="false" />
+            <element signature="method#countCoefficients#0;class#GraphBuilder#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/network/server/JsonSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="method#setSpeed#0;class#JsonSender#0" expanded="false" />
+            <element signature="e#3111#3112#0" expanded="true" />
+            <element signature="e#3165#3166#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/network/server/ClockUpdater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/network/server/ChargeUpdater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="2272" selection-start-line="10" selection-start-column="2272" selection-end-line="10" selection-end-column="2272" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2125">
+          <caret line="125" column="30" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#7;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#2;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#4;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/websocket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9690">
+          <caret line="570" column="95" selection-start-line="570" selection-start-column="95" selection-end-line="570" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/network/server/ClockUpdater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/network/model/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1343">
+          <caret line="172" column="33" selection-start-line="172" selection-start-column="16" selection-end-line="172" selection-end-column="33" />
+          <folding>
+            <element signature="e#1503#1504#0" expanded="true" />
+            <element signature="e#1544#1545#0" expanded="true" />
+            <element signature="e#1604#1605#0" expanded="true" />
+            <element signature="e#1666#1667#0" expanded="true" />
+            <element signature="method#getCoeffAsString#0;class#Node#0" expanded="false" />
+            <element signature="method#getNeighboursAsString#0;class#Node#0" expanded="false" />
+            <element signature="method#getAnotherNeighboursAsString#0;class#Node#0" expanded="false" />
+            <element signature="method#getSentenceNeighboursAsString#0;class#Node#0" expanded="false" />
+            <element signature="method#getStringBestNeighbour#0;class#Node#0" expanded="false" />
+            <element signature="method#addNeighbour#0;class#Node#0" expanded="false" />
+            <element signature="e#3916#3943#0" expanded="false" />
+            <element signature="e#4252#4279#0" expanded="false" />
+            <element signature="method#addSentenceNeighbour#0;class#Node#0" expanded="false" />
+            <element signature="e#4669#4696#0" expanded="false" />
+            <element signature="method#getCoefficient#0;class#Node#0" expanded="false" />
+            <element signature="method#updateCoefficients#0;class#Node#0" expanded="false" />
+            <element signature="method#addNeighCoefficient#0;class#Node#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/network/server/GraphBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#createGraph#0;class#GraphBuilder#0" expanded="false" />
+            <element signature="method#setConnections#0;class#GraphBuilder#0" expanded="false" />
+            <element signature="method#countCoefficients#0;class#GraphBuilder#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/network/server/JsonSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1326">
+          <caret line="111" column="27" selection-start-line="111" selection-start-column="27" selection-end-line="111" selection-end-column="27" />
+          <folding>
+            <element signature="method#setSpeed#0;class#JsonSender#0" expanded="false" />
+            <element signature="e#3111#3112#0" expanded="true" />
+            <element signature="e#3165#3166#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/monkey.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="2272" selection-start-line="10" selection-start-column="2272" selection-end-line="10" selection-end-column="2272" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/test2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/network/model/Coefficients.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#649#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1243,7 +1476,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1259,7 +1491,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2295">
           <caret line="145" column="39" selection-start-line="145" selection-start-column="39" selection-end-line="145" selection-end-column="39" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#createGraph#0;class#GraphBuilder#0" expanded="false" />
+            <element signature="method#setConnections#0;class#GraphBuilder#0" expanded="false" />
+            <element signature="method#countCoefficients#0;class#GraphBuilder#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1267,9 +1504,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1285,18 +1520,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp" />
     <entry file="file://$PROJECT_DIR$/web/hello.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1312,7 +1539,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1320,7 +1546,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1357,7 +1582,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/network/model/Coefficients.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/util/function/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Java projects/TabuSearch_stary/TabuSearch/src/TabuSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Java projects/TabuSearch_stary/TabuSearch/src/TS_GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="866" column="42" selection-start-line="866" selection-start-column="36" selection-end-line="866" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -1368,50 +1620,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/network/model/Coefficients.java">
+    <entry file="file://$PROJECT_DIR$/src/resources/test2.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="115" column="58" selection-start-line="115" selection-start-column="58" selection-end-line="115" selection-end-column="58" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#a#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#a#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#a#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#5;n#a#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#6;n#a#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#6;n#a#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#6;n#a#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#6;n#a#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#2;n#div#6;n#a#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#6;n#a#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#4;n#div#6;n#a#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#6;n#a#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1464083392777" expanded="true" signature="4119:4413" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/network/server/NodeWebSocketServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="38" column="74" selection-start-line="38" selection-start-column="74" selection-end-line="38" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/network/server/NodeSessionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2590">
-          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1419,47 +1631,69 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/test.txt___jb_tmp___" />
+    <entry file="file://$PROJECT_DIR$/src/resources/test.txt___jb_tmp___" />
+    <entry file="file://$PROJECT_DIR$/src/resources/test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="2272" selection-start-line="10" selection-start-column="2272" selection-end-line="10" selection-end-column="2272" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/websocket.js">
+    <entry file="file://$PROJECT_DIR$/web/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="582" column="25" selection-start-line="582" selection-start-column="25" selection-end-line="582" selection-end-column="25" />
+        <state relative-caret-position="382">
+          <caret line="125" column="30" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#7;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#2;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#4;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/network/server/NodeSessionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1349">
+          <caret line="230" column="0" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/network/model/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="172" column="33" selection-start-line="172" selection-start-column="16" selection-end-line="172" selection-end-column="33" />
+        <state relative-caret-position="289">
+          <caret line="71" column="64" selection-start-line="71" selection-start-column="64" selection-end-line="71" selection-end-column="64" />
           <folding>
-            <element signature="e#689#690#0" expanded="true" />
-            <element signature="e#711#712#0" expanded="true" />
-            <element signature="e#756#757#0" expanded="true" />
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#837#838#0" expanded="true" />
-            <element signature="e#884#885#0" expanded="true" />
-            <element signature="e#936#937#0" expanded="true" />
-            <element signature="e#961#962#0" expanded="true" />
-            <element signature="e#1417#1418#0" expanded="true" />
-            <element signature="e#1444#1445#0" expanded="true" />
-            <element signature="e#1499#1500#0" expanded="true" />
-            <element signature="e#1540#1541#0" expanded="true" />
+            <element signature="e#1503#1504#0" expanded="true" />
+            <element signature="e#1544#1545#0" expanded="true" />
+            <element signature="e#1604#1605#0" expanded="true" />
+            <element signature="e#1666#1667#0" expanded="true" />
             <element signature="method#getCoeffAsString#0;class#Node#0" expanded="false" />
             <element signature="method#getNeighboursAsString#0;class#Node#0" expanded="false" />
             <element signature="method#getAnotherNeighboursAsString#0;class#Node#0" expanded="false" />
             <element signature="method#getSentenceNeighboursAsString#0;class#Node#0" expanded="false" />
             <element signature="method#getStringBestNeighbour#0;class#Node#0" expanded="false" />
-            <element signature="e#3574#3575#0" expanded="true" />
-            <element signature="e#3608#3609#0" expanded="true" />
             <element signature="method#addNeighbour#0;class#Node#0" expanded="false" />
-            <element signature="e#3790#3817#0" expanded="false" />
-            <element signature="e#4126#4153#0" expanded="false" />
+            <element signature="e#3916#3943#0" expanded="false" />
+            <element signature="e#4252#4279#0" expanded="false" />
             <element signature="method#addSentenceNeighbour#0;class#Node#0" expanded="false" />
-            <element signature="e#4543#4570#0" expanded="false" />
+            <element signature="e#4669#4696#0" expanded="false" />
             <element signature="method#getCoefficient#0;class#Node#0" expanded="false" />
             <element signature="method#updateCoefficients#0;class#Node#0" expanded="false" />
             <element signature="method#addNeighCoefficient#0;class#Node#0" expanded="false" />
@@ -1467,11 +1701,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/network/server/NodeWebSocketServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="73" column="38" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/network/server/GraphBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="93" column="56" selection-start-line="93" selection-start-column="56" selection-end-line="93" selection-end-column="56" />
+        <state relative-caret-position="-407">
+          <caret line="164" column="31" selection-start-line="164" selection-start-column="31" selection-end-line="164" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#createGraph#0;class#GraphBuilder#0" expanded="false" />
+            <element signature="method#setConnections#0;class#GraphBuilder#0" expanded="false" />
+            <element signature="method#countCoefficients#0;class#GraphBuilder#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/network/server/JsonSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="115" column="30" selection-start-line="115" selection-start-column="30" selection-end-line="115" selection-end-column="30" />
+          <folding>
+            <element signature="method#setSpeed#0;class#JsonSender#0" expanded="false" />
+            <element signature="e#3111#3112#0" expanded="true" />
+            <element signature="e#3165#3166#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/network/server/ClockUpdater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13">
+          <caret line="46" column="63" selection-start-line="46" selection-start-column="63" selection-end-line="46" selection-end-column="63" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/websocket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="668" column="9" selection-start-line="668" selection-start-column="9" selection-end-line="668" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/network/server/ChargeUpdater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="109" column="27" selection-start-line="109" selection-start-column="27" selection-end-line="109" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

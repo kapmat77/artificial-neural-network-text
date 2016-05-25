@@ -24,6 +24,7 @@ import javax.websocket.server.ServerEndpoint;
 public class NodeWebSocketServer {
 	
 	private GraphBuilder graphBuilder = new GraphBuilder();
+	private JsonSender jsonSender;
 	
 	@Inject
 	private NodeSessionHandler sessionHandler = new NodeSessionHandler();
@@ -49,11 +50,12 @@ public class NodeWebSocketServer {
 	public void handleMessage(String message, Session session) throws InterruptedException {
 
 		System.out.println("JSON JS->Java: " + message);
+		//Create or set JsonSender object
+		JsonSender.getJsonSender().setSessionHandler(sessionHandler);
 
 		try (JsonReader reader = Json.createReader(new StringReader(message))) {
 			JsonObject jsonMessage = reader.readObject();
 
-			
 			switch(jsonMessage.getString("action")) {
 				case "start":
 					if ("monkey".equals(jsonMessage.getString("name"))) {
@@ -67,6 +69,9 @@ public class NodeWebSocketServer {
 					graphBuilder.buildGraph("update", jsonMessage.getString("word"), sessionHandler, jsonMessage.getString("speed"));
 					break;
 				case "remove":
+					break;
+				case "killChargeThread":
+					graphBuilder.buildGraph("killChargeThread", null, sessionHandler, null);
 					break;
 				case "resetLines":
 					sessionHandler.resetLines();

@@ -22,7 +22,7 @@ public class Node {
 	private Map<Node, Coefficients> neighCoefficient = new HashMap();
 	private Map<Node, Coefficients> neighActive = new HashMap();
 	private double chargingLevel;
-	private double coeffSum;
+	private double coeffSum = 0;
 
 	public double getCoeffSum() {
 		return coeffSum;
@@ -66,6 +66,10 @@ public class Node {
 
 	public void setChargingLevel(double chargingLevel) {
 		this.chargingLevel = chargingLevel;
+	}
+
+	public void increaseChargingLevel(double chargingLevel) {
+		this.chargingLevel = this.chargingLevel + chargingLevel;
 	}
 
 	public int getId() {

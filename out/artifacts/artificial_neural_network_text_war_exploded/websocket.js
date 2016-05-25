@@ -95,8 +95,14 @@ function onMessage(event) {
 		case "updateBestLines":
 			printUpdateBestLines(object);
 			break;
+		case "updateCharge":
+			restart("updateCharge")
+			break
 		case "resetLines":
 			printResetLines(object);
+			break;
+		case "resetNodes":
+			restart("resetNodes");
     }
 }
 
@@ -128,6 +134,10 @@ function updateGraph() {
 }
 
 function resetPage() {
+	var KillChargeThread = {
+		action: "killChargeThread",
+	};
+	socket.send(JSON.stringify(KillChargeThread));
     location.reload();
 }
 
@@ -140,7 +150,7 @@ function resetLines() {
 
 function printNodeElement(node) {
     nodes.push(
-        {id: node.id, name: node.name, level: node.level}
+        {id: node.id, name: node.name, level: node.level, chargeLevel: node.chargeLevel}
     );
 	
     restart("add");
@@ -158,9 +168,6 @@ function isInArray(source, target, array) {
 function printAddLines(node) {
 	var neigh = node.neighbours.split(" ");
 	var coeff = node.coeff.split(" ");
-	console.log(currentNode.name);
-	console.log(neigh);
-	console.log(coeff);
 	
 	
 	for (i=1; i<neigh.length; i++) {
@@ -245,7 +252,9 @@ function printUpdatedNode(node) {
 function printActiveNeuron(node) {
 	
 	var mainPart = document.getElementById("nodeMain"+node.name);
-	mainPart.style.fill="#00FF33";
+	mainPart.style.fill = currentNode.color;
+	console.log(mainPart.style.fill);
+	// mainPart.style.fill="#00FF33";
 	var oldColor = "#FFFFFF";
 	switch(node.level) {
 		case 1:
@@ -267,7 +276,7 @@ function printActiveNeuron(node) {
 			oldColor="#FF4646";
 			break;
 	}
-	setTimeout(function(){ mainPart.style.fill=oldColor; }, 3600);
+	// setTimeout(function(){ mainPart.style.fill=oldColor; }, 3600);
 }
 
 function tick() {
@@ -329,7 +338,13 @@ function isInArray(source, target, array) {
 
 // update graph (called when needed)
 function restart(action, idPath) {
-	
+
+
+	var name = '';
+	if (currentNode!==undefined) {
+		name = currentNode.name;
+	}
+
 	if(action === "addLine") {
 		
 				var name = '';
@@ -471,14 +486,25 @@ function restart(action, idPath) {
             .text(function(d) { return d.name; });
 
         // print node level
-        g.append('svg:text')
+		g.append('svg:text')
 			.attr('id', "nodeLevel" + name)
-            .attr('x', 0)
-            .attr('y', 16)
-            .attr('class', 'id')
-            .style('font-size', levelSize)
-            .style('fill', "black")
-                  .text(function(d) { return d.level; });
+			.attr('x', 0)
+			.attr('y', 16)
+			.attr('class', 'id')
+			.style('font-size', levelSize)
+			.style('fill', "black")
+			.text(function(d) { return d.level; });
+
+		// print charge level
+		g.append('svg:text')
+			.attr('id', "nodeCharge" + name)
+			.attr('x', 0)
+			.attr('y', -10)
+			.attr('class', 'id')
+			.style('font-size', (levelSize-1))
+			.style('fill', "blue")
+			// .text("C_L");
+			.text(function(d) { return d.chargeLevel; });
 
 //   remove old nodes
         circle.exit().remove();
@@ -494,15 +520,15 @@ function restart(action, idPath) {
 		}
 		
 		var mainPart = document.getElementById("nodeMain"+name);
-		
 		var wordPart = document.getElementById("nodeWord"+name);
-		
 		var levelPart = document.getElementById("nodeLevel"+name);
-		
+		var chargePart = document.getElementById("nodeCharge"+name);
+
 		var multCS = 4;
 		var multWS = 2;
-		var paramY = levelPart.getAttribute("y");
-		
+		var paramLevelY = levelPart.getAttribute("y");
+		var paramChargeY = levelPart.getAttribute("y");
+
 		switch(currentNode.level) {
 			case 1:
 				mainPart.style.fill="#FFFFFF";
@@ -513,9 +539,11 @@ function restart(action, idPath) {
 				wordPart.style.font = (wordSize+multWS*1)+"px arial";
 				levelPart.style.font = (levelSize+multWS*1)+"px arial";
 				for(var k = 0; k<multWS*1; k++) {
-					paramY++;
+					paramLevelY++;
 				}
-				levelPart.setAttribute("y",paramY);
+				paramChargeY = (-paramLevelY)+4;
+				levelPart.setAttribute("y",paramLevelY);
+				chargePart.setAttribute("y",paramChargeY);
 				break;
 			case 3:
 				mainPart.style.fill="#FFB3B3";
@@ -523,9 +551,11 @@ function restart(action, idPath) {
 				wordPart.style.font = (wordSize+multWS*2)+"px arial";
 				levelPart.style.font = (levelSize+multWS*2)+"px arial";
 				for(var k = 0; k<multWS*1; k++) {
-					paramY++;
+					paramLevelY++;
 				}
-				levelPart.setAttribute("y",paramY);
+				paramChargeY = (-paramLevelY)+4;
+				levelPart.setAttribute("y",paramLevelY);
+				chargePart.setAttribute("y",paramChargeY);
 				break;
 			case 4:
 				mainPart.style.fill="#FF8D8D";
@@ -533,9 +563,11 @@ function restart(action, idPath) {
 				wordPart.style.font = (wordSize+multWS*3)+"px arial";
 				levelPart.style.font = (levelSize+multWS*3)+"px arial";
 				for(var k = 0; k<multWS*1; k++) {
-					paramY++;
+					paramLevelY++;
 				}
-				levelPart.setAttribute("y",paramY);
+				paramChargeY = (-paramLevelY)+4;
+				levelPart.setAttribute("y",paramLevelY);
+				chargePart.setAttribute("y",paramChargeY);
 				break;
 			case 5:
 				mainPart.style.fill="#FF4646";
@@ -543,9 +575,11 @@ function restart(action, idPath) {
 				wordPart.style.font = "bold " +(wordSize+multWS*4)+"px arial";
 				levelPart.style.font = (levelSize+multWS*4)+"px arial";
 				for(var k = 0; k<multWS*1; k++) {
-					paramY++;
+					paramLevelY++;
 				}
-				levelPart.setAttribute("y",paramY);
+				paramChargeY = (-paramLevelY)+4;
+				levelPart.setAttribute("y",paramLevelY);
+				chargePart.setAttribute("y",paramChargeY);
 				break;
 			defaulty:
 				mainPart.style.fill="#FF4646";
@@ -553,16 +587,26 @@ function restart(action, idPath) {
 				wordPart.style.font = (wordSize+multWS*5)+"px bold arial";
 				levelPart.style.font = (levelSize+multWS*5)+"px arial";
 				for(var k = 0; k<multWS*1; k++) {
-					paramY++;
+					paramLevelY++;
 				}
-				levelPart.setAttribute("y",paramY);
+				paramChargeY = (-paramLevelY)+4;
+				levelPart.setAttribute("y",paramLevelY);
+				chargePart.setAttribute("y",paramChargeY);
 				break;
 		}
-		
+
+		//UPDATE LEVEL
 		var textnode = document.getElementById("nodeLevel"+name);
 		textnode.textContent = currentNode.level;
 
-    } else if (action==="updateLine") {
+
+
+    } else if (action=="updateCharge") {
+		//UPDATE CHARGE LEVEL
+		var textCharge = document.getElementById("nodeCharge"+name);
+		textCharge.textContent = currentNode.chargeLevel;
+
+	} else if (action==="updateLine") {
 		
 		var name = '';
 		if (currentNode!==undefined) {
@@ -572,8 +616,10 @@ function restart(action, idPath) {
 			var neigh = currentNode.neighbours.split(" ");
 			for(var i=1; i<neigh.length; i++) {
 				var singlePath = document.getElementById("path" + neigh[i] + currentNode.name);
-				singlePath.style.stroke="yellow";
-				singlePath.style['stroke-width']="6px";
+				if (singlePath.style.stroke!="red") {
+					singlePath.style.stroke="yellow";
+					singlePath.style['stroke-width']="6px";
+				}
 				// (function(capturedI) {
 				// 	setTimeout(function(){
 				// 		var sPath = document.getElementById("path" + neigh[capturedI] + currentNode.name);
@@ -611,6 +657,16 @@ function restart(action, idPath) {
 				singlePath.style.stroke="000";
 				singlePath.style['stroke-width']="1px";
 			}
+	} else if(action==="resetNodes") {
+		var result = nodes.filter(function( obj ) {
+			return obj.name;
+		});
+		for(var i=0; i<result.length; i++) {
+			console.log("ID: "+ "nodeMain" + result[i].id);
+			console.log("Name: "+ "nodeMain" + result[i].name);
+			var mainPart = document.getElementById("nodeMain"+result[i].name);
+			mainPart.style.fill="#FFF";
+		}
 	}
 }
 
@@ -627,6 +683,19 @@ function keyup() {
 		refresh();
 	}
 }
+var timer = 0;
+$(document).ready(
+	function() {
+		setInterval(function() {
+			if (currentNode.action=="updateTimer") {
+				timer = currentNode.clock;
+			}
+			$('#show').text(
+				'Timer: '
+				+ (timer));
+		}, 100);
+	}
+);
 
 d3.select(window)
 	.on('keyup', keyup);

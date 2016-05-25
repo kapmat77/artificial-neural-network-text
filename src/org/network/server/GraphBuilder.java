@@ -18,82 +18,90 @@ import org.network.model.Coefficients;
 import org.network.model.Node;
 import org.network.model.Sentence;
 
+
 public class GraphBuilder {
 
 	private List<Node> neuralList = new ArrayList<>();
-	private String coeffString = ""; 
-	private int DELAY = 100;
-	private double alfa = 0.7;
-	private double beta = 0.8;
-	private double teta = 1;
+	private String coeffString = "";
+	private static double time = 0;
+	private Thread chargeThread;
+
+	private JsonSender jsonSender;
+
+
+//	public static List<Node> getNeuralList() {
+//		return neuralList;
+//	}
 
 	public void buildGraph(String data, String activeWord, NodeSessionHandler sessionHandler,
 			String speed) throws InterruptedException {
-		switch(speed) {
-			case "1":
-				DELAY = 2500;
-				break;
-			case "2":
-				DELAY = 2000;
-				break;
-			case "3":
-				DELAY = 1500;
-				break;
-			case "4":
-				DELAY = 1000;
-				break;
-			case "5":
-				DELAY = 500;
-				break;
-			case "6":
-				DELAY = 300;
-				break;
-			case "7":
-				DELAY = 150;
-				break;
-			case "8":
-				DELAY = 100;
-				break;
-			case "9":
-				DELAY = 50;
-				break;
-			case "10":
-				DELAY = 10;
-				break;
+
+		jsonSender = JsonSender.getJsonSender();
+
+		if (data.equals("killChargeThread")) {
+			chargeThread.stop();
+			for (Node neuron: neuralList) {
+				neuron.setChargingLevel(0);
+			}
 		}
+
 
 		if (data.equals("update")) {
 			String activeNeuron = activeWord;
-			sendAddSentenceJson(sessionHandler, "");
+			jsonSender.sendAddSentenceJson("");
 //			Node neuron = findNodeByName("VERY");
 //			sendUpdateLinesJson(sessionHandler, neuron);
 			sessionHandler.resetLines();
+			sessionHandler.resetNodes();
 			Thread.sleep(100);
 
-//			activeNeuron = "E4";
+			//TODO i do aktualizacji czasu na stronie www
+			Runnable runClock = new ClockUpdater();
+			Thread clockThread = new Thread(runClock);
+
+			ClockUpdater.setActiveClock(true);
+			clockThread.start();
 
 			findNodes(activeNeuron, sessionHandler, true);
+			ClockUpdater.setActiveClock(false);
+//			clockThread.stop();
 
-			for (Node node: neuralList) {
-				System.out.println(node.getName() + " -> " + node.getCoeffSum());
+			if (chargeThread==null) {
+				Runnable runChargeUpdater = new ChargeUpdater();
+				chargeThread = new Thread(runChargeUpdater);
 			}
-		} else {
 
+			if (!chargeThread.isAlive()) {
+				chargeThread.start();
+			}
+
+		} else {
+			jsonSender.setSpeed(speed);
 			FileOperations file = new FileOperations();
 
-			List<Sentence> inputSentences = file.readDataFromFile("C:\\Users\\Kapmat\\Desktop\\Java projects\\NetBeans_Projects\\WebsocketGraph\\src\\java\\Resources\\" + data);
+			List<Sentence> inputSentences = file.readDataFromFile("C:\\Users\\Kapmat\\Desktop\\Intellij\\artificial-neural-network-text\\src\\resources\\" + data);
 
-//			List<Sentence> inputSentences = new ArrayList<>();
-			Sentence sentence = new Sentence();
-			sentence.addWord("E2");
-			sentence.addWord("E8");
-//			inputSentences.add(sentence);
 
-//			inputSentences.add(sentence);
+			Runnable runClock = new ClockUpdater();
+			Thread clockThread = new Thread(runClock);
+
+			clockThread.start();
 
 			createGraph(inputSentences, sessionHandler);
-		}
+			ChargeUpdater.setNeuralList(neuralList);
 
+			clockThread.stop();
+
+			time = ClockUpdater.getTime();
+//			System.out.println("Time: " + time);
+
+
+
+//			Runnable runChargeUpdater = new ChargeUpdater();
+//			chargeThread = new Thread(runChargeUpdater);
+//
+//			chargeThread.start();
+		}
 	}
 
 	private void findNodes(String activeNeuron, NodeSessionHandler sessionHandler, boolean firstNode) throws InterruptedException {
@@ -103,20 +111,24 @@ public class GraphBuilder {
 		if (firstNode) {
 //			if(neuron.getCoeffSum()>=1) {
 			neuron.setCoeffSum(1);
-				sendActiveNeuronJson(sessionHandler, neuron);
-				sendUpdateSentenceJson(sessionHandler, neuron.getName());
+			neuron.setChargingLevel(neuron.getCoeffSum());
+				jsonSender.sendActiveNeuronJson(neuron, "#00FF33");
+				jsonSender.sendUpdateSentenceJson(neuron.getName());
+				jsonSender.sendUpdateChargeLevel(neuron);
 //			}
 //			sendUpdateLinesJson(sessionHandler, neuron);
 //			sendUpdateBestLineJson(sessionHandler, neuron);
 		} else {
 //			neuron.setCoeffSum();
 		}
+//		jsonSender.sendUpdateNodeJson(neuron);
 
 		List<Node> bestNeigh = new ArrayList<>();
 		Node bestNode;
 		Boolean first = true;
 		Double bestCoeff = 0.0;
 		for (Map.Entry<Node, Coefficients> entry: neuron.getNeighCoefficient().entrySet()) {
+//			jsonSender.sendUpdateNodeJson(entry.getKey());
 			if (first){
 				bestNode = entry.getKey();
 				bestCoeff = entry.getValue().getSynapticWeight();
@@ -137,23 +149,33 @@ public class GraphBuilder {
 		neuron.setBestNeighbours(bestNeigh);
 
 		if (bestCoeff!=0.0) {
-			sendUpdateLinesJson(sessionHandler, neuron);
-			Thread.sleep(1600);
-			sendUpdateBestLineJson(sessionHandler, neuron);
+
 
 			//Increase coeffSum
 			for (Map.Entry<Node,Coefficients> entry: neuron.getNeighCoefficient().entrySet()) {
 				entry.getKey().increaseCoeffSum(entry.getValue().getSynapticWeight());
 			}
 
-			for(Node node: bestNeigh) {
-				sendActiveNeuronJson(sessionHandler, node);
-				sendUpdateSentenceJson(sessionHandler, node.getName());
-			}
-			for(Node node: bestNeigh) {
-				findNodes(node.getName(), sessionHandler, false);
+			for (Node node: neuralList) {
+				node.setChargingLevel(node.getCoeffSum());
 			}
 
+			jsonSender.sendUpdateLinesJson(neuron);
+//			Thread.sleep(1300);
+			jsonSender.sendUpdateBestLineJson(neuron);
+
+			for(Node node: bestNeigh) {
+				if (node.getChargingLevel()>=ChargeUpdater.getTeta()) {
+
+//					jsonSender.sendActiveNeuronJson(node);
+					jsonSender.sendUpdateSentenceJson(node.getName());
+				}
+			}
+			for(Node node: bestNeigh) {
+				if (node.getChargingLevel()>=ChargeUpdater.getTeta()) {
+					findNodes(node.getName(), sessionHandler, false);
+				}
+			}
 		}
 	}
 
@@ -165,7 +187,7 @@ public class GraphBuilder {
 			}
 			int index = 0;
 			//Json add new sentence
-			sendAddSentenceJson(sessionHandler, sentence.toString());
+			jsonSender.sendAddSentenceJson(sentence.toString());
 			for (String word: sentence.getWords()) {
 				Node node = findNodeByName(word);
 				index++;
@@ -177,22 +199,22 @@ public class GraphBuilder {
 					neuralList.add(node);
 					setConnections(node, index, neighbours);
 					//Json add new node
-					sendAddNodeJson(sessionHandler, node);
+					jsonSender.sendAddNodeJson(node);
 					//Json update lines
-					sendAddLinesJson(sessionHandler, node);
+					jsonSender.sendAddLinesJson(node, coeffString);
 				} else {
 					node.increaseLevel();
 					node.updateCoefficients();
 					setConnections(node, index, neighbours);
-					sendAddLinesJson(sessionHandler, node);
+					jsonSender.sendAddLinesJson(node, coeffString);
 					//Json update graph
-					sendUpdateNodeJson(sessionHandler, node);
+					jsonSender.sendUpdateNodeJson(node);
 					
 				}
 //				coeffString = "";
 			}
 		}
-		sendAddSentenceJson(sessionHandler, "Etap uczenia sieci neuronowej zakończony powodzeniem- ilość węzłów: " 
+		jsonSender.sendAddSentenceJson("Etap uczenia sieci neuronowej zakończony powodzeniem- ilość węzłów: "
 				+ neuralList.size());
 //		for (Node node: neuralList) {
 //			sendActiveNeuronJson(sessionHandler, node);
@@ -247,59 +269,6 @@ public class GraphBuilder {
 		return new Node();
 	}
 
-	private void updateChargingLevel(Node node) {
-		double minusPart = 0;
-		if (node.getChargingLevel()<0) {
-			minusPart = alfa*node.getChargingLevel()+((alfa-1)*beta*Math.pow(node.getChargingLevel(),2))/teta;
-		} else if (node.getChargingLevel()>=0 && node.getChargingLevel()<teta) {
-			minusPart = alfa*node.getChargingLevel()+((alfa-1)*beta*Math.pow(node.getChargingLevel(),2))/teta;
-		} else if (node.getChargingLevel()>=teta) {
-			minusPart = alfa*node.getChargingLevel()+((alfa-1)*beta*Math.pow(node.getChargingLevel(),2))/teta;
-		}
-		double chLevel = node.getCoeffSum() - minusPart;
-		node.setChargingLevel(chLevel);
-	}
 
-	private void sendAddNodeJson(NodeSessionHandler sessionHandler, Node node) throws InterruptedException {
-		sessionHandler.addNode(node);
-		Thread.sleep(DELAY);
-	}
-
-	private void sendUpdateNodeJson(NodeSessionHandler sessionHandler, Node node) throws InterruptedException {
-		sessionHandler.updateNode(node);
-		Thread.sleep(DELAY);
-	}
-
-	private void sendAddSentenceJson(NodeSessionHandler sessionHandler, String sentence) throws InterruptedException {
-		sessionHandler.addSentence(sentence);
-		Thread.sleep(DELAY);
-	}
-
-	private void sendUpdateSentenceJson(NodeSessionHandler sessionHandler, String word) throws InterruptedException {
-		sessionHandler.updateSentence(word);
-	}
-	
-	private void sendRemoveSentenceJson(NodeSessionHandler sessionHandler) throws InterruptedException {
-		sessionHandler.removeSentence();
-	}
-
-	private void sendAddLinesJson(NodeSessionHandler sessionHandler, Node node) throws InterruptedException {
-		sessionHandler.addLines(node,coeffString);
-		Thread.sleep(DELAY);
-	}
-	
-	private void sendUpdateLinesJson(NodeSessionHandler sessionHandler, Node node) throws InterruptedException {
-		sessionHandler.updateLines(node);
-		Thread.sleep(DELAY);
-	}
-
-	private void sendActiveNeuronJson(NodeSessionHandler sessionHandler, Node node) throws InterruptedException {
-		sessionHandler.activeNeuron(node);
-	}
-	
-	private void sendUpdateBestLineJson(NodeSessionHandler sessionHandler, Node node) throws InterruptedException {
-		sessionHandler.updateBestLine(node);
-		Thread.sleep(DELAY);
-	}
 }
 
