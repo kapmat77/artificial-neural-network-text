@@ -1,128 +1,135 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title></title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-		<script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
 
-        <link rel="stylesheet" type="text/css" href="style.css">
-		<link rel="stylesheet" type="text/css" href="app.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="app.css">
 
-		<script type="text/javascript"
-				src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript"
+            src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 
-    </head>
-		<div style="float: left; width: 250px;" id="wrapper">
-			<center><div><b> Artifical Neural Network </b></div></center>
-			<br>
+</head>
+<div style="float: left; width: 250px;" id="wrapper">
+    <center>
+        <div><b> Artifical Neural Network </b></div>
+    </center>
+    <br>
 
-			<!--<div>-->		
-			<div style="float: left; width: 50px;">
-				<div class="button"> <a href="#" OnClick="startCreatingGraphMonkey()">Create graph - MONKEY</a></div>
-			</div>
+    <!--<div>-->
+    <div style="float: left; width: 50px;">
+        <div class="button"><a href="#" OnClick="startCreatingGraphMonkey()">Create graph - MONKEY</a></div>
+    </div>
 
-			<div style="float: right; padding-right: 80px; width: 50px;">
-				<div class="button"> <a href="#" OnClick="startCreatingGraphTest()">Create graph - TEST</a></div>
-			</div>
-			<!--</div>-->
-			<br>
-			<br>
-			<br>
-			<a>Speed (graph):</a>
-					<select id="speed">
-						<option value="10">10</option>
-						<option value="9">9</option>
-						<option value="8">8</option>
-						<option value="7">7</option>
-						<option value="6">6</option>
-						<option value="5">5</option>
-						<option value="4">4</option>
-						<option value="3">3</option>
-						<option value="2">2</option>
-						<option value="1">1</option>
-					</select>
-					<br>
-					<br>
+    <div style="float: right; padding-right: 80px; width: 50px;">
+        <div class="button"><a href="#" OnClick="startCreatingGraphTest()">Create graph - TEST</a></div>
+    </div>
+    <!--</div>-->
+    <br>
+    <br>
+    <br>
+    <a>Speed (graph):</a>
+    <select id="speed">
+        <option value="10">10</option>
+        <option value="9">9</option>
+        <option value="8">8</option>
+        <option value="7">7</option>
+        <option value="6">6</option>
+        <option value="5">5</option>
+        <option value="4">4</option>
+        <option value="3">3</option>
+        <option value="2">2</option>
+        <option value="1">1</option>
+    </select>
+    <!--<div style="float: left; width: 50px;">-->
+    <!--<div class="buttonGreen"> <a href="#" OnClick="updateGraph()">Activate neuron</a> </div>-->
+    <!--</div>-->
 
-					<br>
-					<div style="float: left; width: 50px;">
-						<div class="buttonGreen"> <a href="#" OnClick="updateGraph()">Activate neuron</a> </div>
-					</div>
+    <!--<div style="float: right; padding-right: 80px; width: 50px;">-->
+    <!--<select id="selectedWord">-->
+    <!--<option value="MONKEY">MONKEY</option>-->
+    <!--<option value="I">I</option>-->
+    <!--<option value="HAVE">HAVE</option>-->
+    <!--<option value="A">A</option>-->
+    <!--<option value="MY">MY</option>-->
+    <!--<option value="IS">IS</option>-->
+    <!--<option value="VERY">VERY</option>-->
+    <!--<option value="SMALL">SMALL</option>-->
+    <!--<option value="IT">IT</option>-->
+    <!--<option value="LOVELY">LOVELY</option>-->
+    <!--<option value="LIKES">LIKES</option>-->
+    <!--<option value="TO">TO</option>-->
+    <!--<option value="SIT">SIT</option>-->
+    <!--<option value="ON">ON</option>-->
+    <!--<option value="HEAD">HEAD</option>-->
+    <!--<option value="QUICKLY">QUICKLY</option>-->
+    <!--<option value="ALSO">ALSO</option>-->
+    <!--<option value="CLEVER">CLEVER</option>-->
+    <!--<option value="LEARNS">LEARNS</option>-->
+    <!--<option value="LOVELY">LOVELY</option>-->
+    <!--</select>-->
+    <!--</div>-->
 
-					<div style="float: right; padding-right: 80px; width: 50px;">
-						<select id="selectedWord">
-							<option value="MONKEY">MONKEY</option>
-							<option value="I">I</option>
-							<option value="HAVE">HAVE</option>
-							<option value="A">A</option>
-							<option value="MY">MY</option>
-							<option value="IS">IS</option>
-							<option value="VERY">VERY</option>
-							<option value="SMALL">SMALL</option>
-							<option value="IT">IT</option>
-							<option value="LOVELY">LOVELY</option>
-							<option value="LIKES">LIKES</option>
-							<option value="TO">TO</option>
-							<option value="SIT">SIT</option>
-							<option value="ON">ON</option>
-							<option value="HEAD">HEAD</option>
-							<option value="QUICKLY">QUICKLY</option>
-							<option value="ALSO">ALSO</option>
-							<option value="CLEVER">CLEVER</option>
-							<option value="LEARNS">LEARNS</option>
-							<option value="LOVELY">LOVELY</option>
-						</select>
-					</div>
-					<br>
-					<br>
-					<br>
 
-					<div>
-						<div style="float: left; width: 50px;">
-							<div class="button"> <a href="#" OnClick="resetLines()">Reset lines</a> </div>
-						</div>
+    <div style="float: right;">
+        <script src="websocket.js"></script>
+    </div>
+    <div>
+        <br>
+        <a>Output:</a>
+        <div id="sentenceHTML"
+             style="height: 200px; border-style: groove; margin-right: 10px; overflow-y: scroll; margin-top: 0px; background: #FFF">
+        </div>
+    </div>
+    <div>
+        <br>
+        <a>Command line:</a>
+        <textarea id="objectParameters" style="height: 150px; width: 230px; overflow-y: scroll;">Monkey</textarea>
+        <br>
+        <br>
+        <div class="buttonGreen" style="margin-left: 70px"><a href="#" OnClick="updateGraph()">Active neurons</a></div>
+    </div>
+    <div>
+        <br>
+        <div style="float: left; width: 20px; margin-left: 0px">
+            <a style="font-size: 12px">Alfa:</a>
+        </div>
+        <div style="float: left; width: 35px; margin-left: 10px">
+            <input type="text" id="alfa" size="1" value="1">
+        </div>
+        <div style="float: left; width: 20px; margin-left: 10px">
+            <a style="font-size: 12px">Beta:</a>
+        </div>
+        <div style="float: left; width: 35px; margin-left: 10px">
+            <input type="text" id="beta" size="1" value="1">
+        </div>
+        <div style="float: left; width: 20px; margin-left: 10px">
+            <a style="font-size: 12px">Teta:</a>
+        </div>
+        <div style="float: left; width: 35px; margin-left: 10px">
+            <input type="text" id="teta" size="1" value="1">
+        </div>
+        <br>
+        <br>
+        <div class="button" style="margin-left: 70px"><a href="#" OnClick="updateParameters()">Update parameters</a></div>
+    </div>
+    <br>
+    <br>
+    <div style="margin-top: 0%">
+        <div style="float: left; width: 50px;">
+            <div class="button"><a href="#" OnClick="resetLines()">Reset lines</a></div>
+        </div>
 
-						<div style="float: right; padding-right: 80px; width: 50px;">
-							<div class="button"> <a href="#" OnClick="resetPage()">Reset page</a> </div>
-						</div>
-					</div>
-					<div style="float: right;">
-						<script src="websocket.js"></script>
-					</div>
-					<div id="sentenceHTML" style="height: 100px; border-style: groove; margin-right: 10px; overflow-y: scroll; margin-top: 40px; background: #FFF">
-					</div>
+        <div style="float: right; padding-right: 80px; width: 50px;">
+            <div class="button"><a href="#" OnClick="resetPage()">Reset page</a></div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div id="show"></div>
+</div>
 
-					<div>
-						<br>
-						<a>Neurons to activation:</a>
-						<textarea id="objectParameters" style="height: 100px; width: 230px; overflow-y: scroll;">6,10	2,80	4,00	1,30</textarea>
-
-						<div class="button" > <a href="#" OnClick="submitData()">Submit data</a> </div>
-					</div>
-					<div>
-						<br>
-						<div style="float: left; width: 20px; margin-left: 0px">
-							<a style="font-size: 12px">Alfa:</a>
-						</div>
-						<div style="float: left; width: 35px; margin-left: 10px">
-							<input type="text" id="alfa" size="1" value="1">
-						</div>
-						<div style="float: left; width: 20px; margin-left: 10px">
-							<a style="font-size: 12px">Beta:</a>
-						</div>
-						<div style="float: left; width: 35px; margin-left: 10px">
-							<input type="text" id="beta" size="1" value="1">
-						</div>
-						<div style="float: left; width: 20px; margin-left: 10px">
-							<a style="font-size: 12px">Teta:</a>
-						</div>
-						<div style="float: left; width: 35px; margin-left: 10px">
-							<input type="text" id="teta" size="1" value="1">
-						</div>
-					</div>
-			<br>
-			<br>
-				<div id="show"></div>
-			</div>
 </html>

@@ -17,6 +17,7 @@ public class Node {
 	private int level = 0;
 	private List<Node> neighbours = new ArrayList<>();
 	private List<Node> someOfNeighbours = new ArrayList<>();
+	private List<Node> allowedNeighbours = new ArrayList<>();
 	private List<Node> sentenceNeighbours = new ArrayList<>();
 	private List<Node> bestNeighbours  = new ArrayList<>();
 	private Map<Node, Coefficients> neighCoefficient = new HashMap();
@@ -127,7 +128,13 @@ public class Node {
 		
 		return str;
 	}
-	
+
+	public List<Node> getAllowedNodes() {
+		allowedNeighbours = new ArrayList<>(neighbours);
+		allowedNeighbours.removeAll(someOfNeighbours);
+		return allowedNeighbours;
+	}
+
 	public String getAnotherNeighboursAsString() {
 		String str1[] = new String[someOfNeighbours.size()+1];
 		String str2[] = new String[neighbours.size()+1];

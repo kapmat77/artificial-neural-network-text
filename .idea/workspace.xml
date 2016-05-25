@@ -1,28 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06bc3721-df25-4372-981d-4c7e118d41ba" name="Default" comment="Commit before active changes !">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/network/server/ChargeUpdater.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/network/server/ClockUpdater.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/network/server/JsonSender.java" />
+    <list default="true" id="06bc3721-df25-4372-981d-4c7e118d41ba" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/WEB-INF/classes/org/network/model/Node.class" afterPath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/WEB-INF/classes/org/network/model/Node.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/WEB-INF/classes/org/network/server/GraphBuilder.class" afterPath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/WEB-INF/classes/org/network/server/GraphBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/WEB-INF/classes/org/network/server/NodeSessionHandler.class" afterPath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/WEB-INF/classes/org/network/server/NodeSessionHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/WEB-INF/classes/org/network/server/NodeWebSocketServer.class" afterPath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/WEB-INF/classes/org/network/server/NodeWebSocketServer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/artificial-neural-network-text/org/network/model/Node.class" afterPath="$PROJECT_DIR$/out/production/artificial-neural-network-text/org/network/model/Node.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/artificial-neural-network-text/org/network/server/GraphBuilder.class" afterPath="$PROJECT_DIR$/out/production/artificial-neural-network-text/org/network/server/GraphBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/artificial-neural-network-text/org/network/server/NodeSessionHandler.class" afterPath="$PROJECT_DIR$/out/production/artificial-neural-network-text/org/network/server/NodeSessionHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/artificial-neural-network-text/org/network/server/NodeWebSocketServer.class" afterPath="$PROJECT_DIR$/out/production/artificial-neural-network-text/org/network/server/NodeWebSocketServer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/artificial-neural-network-text.iml" afterPath="$PROJECT_DIR$/artificial-neural-network-text.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/WEB-INF/classes/resources/test.txt" afterPath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/WEB-INF/classes/resources/test.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/WEB-INF/classes/resources/monkey.txt" afterPath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/WEB-INF/classes/resources/monkey.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/index.html" afterPath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/websocket.js" afterPath="$PROJECT_DIR$/out/artifacts/artificial_neural_network_text_war_exploded/websocket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/artificial-neural-network-text/resources/test.txt" afterPath="$PROJECT_DIR$/out/production/artificial-neural-network-text/resources/test.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/artificial-neural-network-text/resources/monkey.txt" afterPath="$PROJECT_DIR$/out/production/artificial-neural-network-text/resources/monkey.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/network/model/Node.java" afterPath="$PROJECT_DIR$/src/org/network/model/Node.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/network/server/ChargeUpdater.java" afterPath="$PROJECT_DIR$/src/org/network/server/ChargeUpdater.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/network/server/FileOperations.java" afterPath="$PROJECT_DIR$/src/org/network/server/FileOperations.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/network/server/GraphBuilder.java" afterPath="$PROJECT_DIR$/src/org/network/server/GraphBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/network/server/NodeSessionHandler.java" afterPath="$PROJECT_DIR$/src/org/network/server/NodeSessionHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/network/server/JsonSender.java" afterPath="$PROJECT_DIR$/src/org/network/server/JsonSender.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/network/server/NodeWebSocketServer.java" afterPath="$PROJECT_DIR$/src/org/network/server/NodeWebSocketServer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/monkey.txt" afterPath="$PROJECT_DIR$/src/resources/monkey.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/test.txt" afterPath="$PROJECT_DIR$/src/resources/test.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.html" afterPath="$PROJECT_DIR$/web/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/websocket.js" afterPath="$PROJECT_DIR$/web/websocket.js" />
@@ -51,23 +46,28 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="125" column="30" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="30" />
+            <state relative-caret-position="175">
+              <caret line="119" column="8" selection-start-line="119" selection-start-column="8" selection-end-line="119" selection-end-column="8" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#0;n#div#4;n#div#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#2;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#4;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#5;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#6;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#6;n#div#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#textarea#0;n#div#7;n#div#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#2;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#4;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#5;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#6;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1464213664786" expanded="false" signature="1427:1452" ph="..." />
+                <marker date="1464213664786" expanded="false" signature="1597:1644" ph="..." />
               </folding>
             </state>
           </provider>
@@ -76,8 +76,8 @@
       <file leaf-file-name="websocket.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/websocket.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="668" column="9" selection-start-line="668" selection-start-column="9" selection-end-line="668" selection-end-column="9" />
+            <state relative-caret-position="237">
+              <caret line="165" column="38" selection-start-line="165" selection-start-column="38" selection-end-line="165" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -86,37 +86,9 @@
       <file leaf-file-name="NodeWebSocketServer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/network/server/NodeWebSocketServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="73" column="38" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
+            <state relative-caret-position="986">
+              <caret line="71" column="27" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Node.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/network/model/Node.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="71" column="64" selection-start-line="71" selection-start-column="64" selection-end-line="71" selection-end-column="64" />
-              <folding>
-                <element signature="e#1503#1504#0" expanded="true" />
-                <element signature="e#1544#1545#0" expanded="true" />
-                <element signature="e#1604#1605#0" expanded="true" />
-                <element signature="e#1666#1667#0" expanded="true" />
-                <element signature="method#getCoeffAsString#0;class#Node#0" expanded="false" />
-                <element signature="method#getNeighboursAsString#0;class#Node#0" expanded="false" />
-                <element signature="method#getAnotherNeighboursAsString#0;class#Node#0" expanded="false" />
-                <element signature="method#getSentenceNeighboursAsString#0;class#Node#0" expanded="false" />
-                <element signature="method#getStringBestNeighbour#0;class#Node#0" expanded="false" />
-                <element signature="method#addNeighbour#0;class#Node#0" expanded="false" />
-                <element signature="e#3916#3943#0" expanded="false" />
-                <element signature="e#4252#4279#0" expanded="false" />
-                <element signature="method#addSentenceNeighbour#0;class#Node#0" expanded="false" />
-                <element signature="e#4669#4696#0" expanded="false" />
-                <element signature="method#getCoefficient#0;class#Node#0" expanded="false" />
-                <element signature="method#updateCoefficients#0;class#Node#0" expanded="false" />
-                <element signature="method#addNeighCoefficient#0;class#Node#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -124,18 +96,18 @@
       <file leaf-file-name="NodeSessionHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/network/server/NodeSessionHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1349">
-              <caret line="230" column="0" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
+            <state relative-caret-position="754">
+              <caret line="228" column="17" selection-start-line="228" selection-start-column="17" selection-end-line="228" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GraphBuilder.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GraphBuilder.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/network/server/GraphBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-407">
-              <caret line="164" column="31" selection-start-line="164" selection-start-column="31" selection-end-line="164" selection-end-column="31" />
+            <state relative-caret-position="322">
+              <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#createGraph#0;class#GraphBuilder#0" expanded="false" />
@@ -146,37 +118,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JsonSender.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/network/server/JsonSender.java">
+      <file leaf-file-name="FileOperations.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/network/server/FileOperations.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="115" column="30" selection-start-line="115" selection-start-column="30" selection-end-line="115" selection-end-column="30" />
-              <folding>
-                <element signature="method#setSpeed#0;class#JsonSender#0" expanded="false" />
-                <element signature="e#3111#3112#0" expanded="true" />
-                <element signature="e#3165#3166#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClockUpdater.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/network/server/ClockUpdater.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13">
-              <caret line="46" column="63" selection-start-line="46" selection-start-column="63" selection-end-line="46" selection-end-column="63" />
+            <state relative-caret-position="128">
+              <caret line="35" column="46" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChargeUpdater.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/org/network/server/ChargeUpdater.java">
+      <file leaf-file-name="monkey.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/monkey.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="109" column="27" selection-start-line="109" selection-start-column="27" selection-end-line="109" selection-end-column="27" />
+            <state relative-caret-position="136">
+              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JsonSender.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/network/server/JsonSender.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="148">
+              <caret line="75" column="25" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="38" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#setSpeed#0;class#JsonSender#0" expanded="false" />
+                <element signature="e#3115#3116#0" expanded="true" />
+                <element signature="e#3169#3170#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -185,9 +155,21 @@
       <file leaf-file-name="test.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/resources/test.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="2272" selection-start-line="10" selection-start-column="2272" selection-end-line="10" selection-end-column="2272" />
+            <state relative-caret-position="102">
+              <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChargeUpdater.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/network/server/ChargeUpdater.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="968">
+              <caret line="86" column="51" selection-start-line="86" selection-start-column="51" selection-end-line="86" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -221,17 +203,19 @@
         <option value="$PROJECT_DIR$/web/hello.jsp" />
         <option value="$PROJECT_DIR$/web/app.css" />
         <option value="$PROJECT_DIR$/src/org/network/model/Coefficients.java" />
-        <option value="$PROJECT_DIR$/web/index.html" />
         <option value="$PROJECT_DIR$/src/resources/test.txt___jb_tmp___" />
+        <option value="$PROJECT_DIR$/src/org/network/server/ClockUpdater.java" />
+        <option value="$PROJECT_DIR$/src/org/network/server/NodeSessionHandler.java" />
+        <option value="$PROJECT_DIR$/src/resources/monkey.txt" />
+        <option value="$PROJECT_DIR$/src/org/network/model/Node.java" />
+        <option value="$PROJECT_DIR$/src/org/network/server/FileOperations.java" />
+        <option value="$PROJECT_DIR$/src/org/network/server/JsonSender.java" />
         <option value="$PROJECT_DIR$/src/resources/test.txt" />
         <option value="$PROJECT_DIR$/src/org/network/server/NodeWebSocketServer.java" />
-        <option value="$PROJECT_DIR$/src/org/network/server/ClockUpdater.java" />
-        <option value="$PROJECT_DIR$/src/org/network/model/Node.java" />
-        <option value="$PROJECT_DIR$/src/org/network/server/JsonSender.java" />
-        <option value="$PROJECT_DIR$/src/org/network/server/NodeSessionHandler.java" />
         <option value="$PROJECT_DIR$/web/websocket.js" />
-        <option value="$PROJECT_DIR$/src/org/network/server/GraphBuilder.java" />
+        <option value="$PROJECT_DIR$/web/index.html" />
         <option value="$PROJECT_DIR$/src/org/network/server/ChargeUpdater.java" />
+        <option value="$PROJECT_DIR$/src/org/network/server/GraphBuilder.java" />
       </list>
     </option>
   </component>
@@ -1187,7 +1171,7 @@
       <workItem from="1464072006220" duration="21518000" />
       <workItem from="1464166633696" duration="11608000" />
       <workItem from="1464181625987" duration="1949000" />
-      <workItem from="1464191714823" duration="5589000" />
+      <workItem from="1464191714823" duration="22043000" />
     </task>
     <task id="LOCAL-00001" summary="Commit before active changes !">
       <created>1464088727484</created>
@@ -1196,11 +1180,18 @@
       <option name="project" value="LOCAL" />
       <updated>1464088727484</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Working - one neuron activation only">
+      <created>1464197338973</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1464197338973</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45611000" />
+    <option name="totallyTimeSpent" value="62065000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1616" height="886" extended-state="6" />
@@ -1208,20 +1199,20 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38402063" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5285525" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43556702" sideWeight="0.341875" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3726708" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44329897" sideWeight="0.658125" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25099602" sideWeight="0.658125" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.159375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16388175" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32763976" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1229,7 +1220,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41365978" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45152724" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1250,11 +1241,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit before active changes !" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit before active changes !" />
+    <MESSAGE value="Working - one neuron activation only" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working - one neuron activation only" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="20" />
+      <option name="time" value="24" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
@@ -1268,32 +1260,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/network/model/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
-          <folding>
-            <element signature="e#1503#1504#0" expanded="true" />
-            <element signature="e#1544#1545#0" expanded="true" />
-            <element signature="e#1604#1605#0" expanded="true" />
-            <element signature="e#1666#1667#0" expanded="true" />
-            <element signature="method#getCoeffAsString#0;class#Node#0" expanded="false" />
-            <element signature="method#getNeighboursAsString#0;class#Node#0" expanded="false" />
-            <element signature="method#getAnotherNeighboursAsString#0;class#Node#0" expanded="false" />
-            <element signature="method#getSentenceNeighboursAsString#0;class#Node#0" expanded="false" />
-            <element signature="method#getStringBestNeighbour#0;class#Node#0" expanded="false" />
-            <element signature="method#addNeighbour#0;class#Node#0" expanded="false" />
-            <element signature="e#3916#3943#0" expanded="false" />
-            <element signature="e#4252#4279#0" expanded="false" />
-            <element signature="method#addSentenceNeighbour#0;class#Node#0" expanded="false" />
-            <element signature="e#4669#4696#0" expanded="false" />
-            <element signature="method#getCoefficient#0;class#Node#0" expanded="false" />
-            <element signature="method#updateCoefficients#0;class#Node#0" expanded="false" />
-            <element signature="method#addNeighCoefficient#0;class#Node#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/network/server/NodeSessionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="952">
@@ -1321,8 +1287,8 @@
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="method#setSpeed#0;class#JsonSender#0" expanded="false" />
-            <element signature="e#3111#3112#0" expanded="true" />
-            <element signature="e#3165#3166#0" expanded="true" />
+            <element signature="e#3115#3116#0" expanded="true" />
+            <element signature="e#3169#3170#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1359,19 +1325,24 @@
           <caret line="125" column="30" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="30" />
           <folding>
             <element signature="n#style#0;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#4;n#div#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#2;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#4;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#6;n#div#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#7;n#div#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#2;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#4;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#6;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1464213664786" expanded="false" signature="1427:1452" ph="..." />
+            <marker date="1464213664786" expanded="false" signature="1597:1644" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1397,20 +1368,19 @@
         <state relative-caret-position="1343">
           <caret line="172" column="33" selection-start-line="172" selection-start-column="16" selection-end-line="172" selection-end-column="33" />
           <folding>
-            <element signature="e#1503#1504#0" expanded="true" />
-            <element signature="e#1544#1545#0" expanded="true" />
-            <element signature="e#1604#1605#0" expanded="true" />
-            <element signature="e#1666#1667#0" expanded="true" />
+            <element signature="e#1562#1563#0" expanded="true" />
+            <element signature="e#1603#1604#0" expanded="true" />
+            <element signature="e#1663#1664#0" expanded="true" />
+            <element signature="e#1725#1726#0" expanded="true" />
             <element signature="method#getCoeffAsString#0;class#Node#0" expanded="false" />
             <element signature="method#getNeighboursAsString#0;class#Node#0" expanded="false" />
-            <element signature="method#getAnotherNeighboursAsString#0;class#Node#0" expanded="false" />
             <element signature="method#getSentenceNeighboursAsString#0;class#Node#0" expanded="false" />
             <element signature="method#getStringBestNeighbour#0;class#Node#0" expanded="false" />
             <element signature="method#addNeighbour#0;class#Node#0" expanded="false" />
-            <element signature="e#3916#3943#0" expanded="false" />
-            <element signature="e#4252#4279#0" expanded="false" />
+            <element signature="e#4145#4172#0" expanded="false" />
+            <element signature="e#4481#4508#0" expanded="false" />
             <element signature="method#addSentenceNeighbour#0;class#Node#0" expanded="false" />
-            <element signature="e#4669#4696#0" expanded="false" />
+            <element signature="e#4898#4925#0" expanded="false" />
             <element signature="method#getCoefficient#0;class#Node#0" expanded="false" />
             <element signature="method#updateCoefficients#0;class#Node#0" expanded="false" />
             <element signature="method#addNeighCoefficient#0;class#Node#0" expanded="false" />
@@ -1437,8 +1407,8 @@
           <caret line="111" column="27" selection-start-line="111" selection-start-column="27" selection-end-line="111" selection-end-column="27" />
           <folding>
             <element signature="method#setSpeed#0;class#JsonSender#0" expanded="false" />
-            <element signature="e#3111#3112#0" expanded="true" />
-            <element signature="e#3165#3166#0" expanded="true" />
+            <element signature="e#3115#3116#0" expanded="true" />
+            <element signature="e#3169#3170#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1469,6 +1439,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="e#315#316#0" expanded="false" />
+            <element signature="e#350#351#0" expanded="false" />
+            <element signature="e#516#517#0" expanded="false" />
+            <element signature="e#544#545#0" expanded="false" />
+            <element signature="e#601#602#0" expanded="false" />
+            <element signature="e#644#645#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1589,6 +1567,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#315#316#0" expanded="false" />
+            <element signature="e#350#351#0" expanded="false" />
+            <element signature="e#516#517#0" expanded="false" />
+            <element signature="e#544#545#0" expanded="false" />
+            <element signature="e#601#602#0" expanded="false" />
+            <element signature="e#644#645#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1627,73 +1613,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/monkey.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/test.txt___jb_tmp___" />
     <entry file="file://$PROJECT_DIR$/src/resources/test.txt___jb_tmp___" />
-    <entry file="file://$PROJECT_DIR$/src/resources/test.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="2272" selection-start-line="10" selection-start-column="2272" selection-end-line="10" selection-end-column="2272" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="125" column="30" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#div#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#7;n#div#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#2;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#4;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#8;n#div#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/network/server/NodeSessionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1349">
-          <caret line="230" column="0" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/network/model/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="71" column="64" selection-start-line="71" selection-start-column="64" selection-end-line="71" selection-end-column="64" />
+        <state relative-caret-position="148">
+          <caret line="71" column="37" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="37" />
           <folding>
-            <element signature="e#1503#1504#0" expanded="true" />
-            <element signature="e#1544#1545#0" expanded="true" />
-            <element signature="e#1604#1605#0" expanded="true" />
-            <element signature="e#1666#1667#0" expanded="true" />
+            <element signature="e#1562#1563#0" expanded="true" />
+            <element signature="e#1603#1604#0" expanded="true" />
+            <element signature="e#1663#1664#0" expanded="true" />
+            <element signature="e#1725#1726#0" expanded="true" />
             <element signature="method#getCoeffAsString#0;class#Node#0" expanded="false" />
             <element signature="method#getNeighboursAsString#0;class#Node#0" expanded="false" />
-            <element signature="method#getAnotherNeighboursAsString#0;class#Node#0" expanded="false" />
             <element signature="method#getSentenceNeighboursAsString#0;class#Node#0" expanded="false" />
             <element signature="method#getStringBestNeighbour#0;class#Node#0" expanded="false" />
             <element signature="method#addNeighbour#0;class#Node#0" expanded="false" />
-            <element signature="e#3916#3943#0" expanded="false" />
-            <element signature="e#4252#4279#0" expanded="false" />
+            <element signature="e#4145#4172#0" expanded="false" />
+            <element signature="e#4481#4508#0" expanded="false" />
             <element signature="method#addSentenceNeighbour#0;class#Node#0" expanded="false" />
-            <element signature="e#4669#4696#0" expanded="false" />
+            <element signature="e#4898#4925#0" expanded="false" />
             <element signature="method#getCoefficient#0;class#Node#0" expanded="false" />
             <element signature="method#updateCoefficients#0;class#Node#0" expanded="false" />
             <element signature="method#addNeighCoefficient#0;class#Node#0" expanded="false" />
@@ -1701,61 +1640,121 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/network/server/NodeWebSocketServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="73" column="38" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/network/server/GraphBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-407">
-          <caret line="164" column="31" selection-start-line="164" selection-start-column="31" selection-end-line="164" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#createGraph#0;class#GraphBuilder#0" expanded="false" />
-            <element signature="method#setConnections#0;class#GraphBuilder#0" expanded="false" />
-            <element signature="method#countCoefficients#0;class#GraphBuilder#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/network/server/JsonSender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="115" column="30" selection-start-line="115" selection-start-column="30" selection-end-line="115" selection-end-column="30" />
-          <folding>
-            <element signature="method#setSpeed#0;class#JsonSender#0" expanded="false" />
-            <element signature="e#3111#3112#0" expanded="true" />
-            <element signature="e#3165#3166#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/network/server/ClockUpdater.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13">
+        <state relative-caret-position="258">
           <caret line="46" column="63" selection-start-line="46" selection-start-column="63" selection-end-line="46" selection-end-column="63" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/monkey.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/network/server/JsonSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="75" column="25" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="38" />
+          <folding>
+            <element signature="method#setSpeed#0;class#JsonSender#0" expanded="false" />
+            <element signature="e#3115#3116#0" expanded="true" />
+            <element signature="e#3169#3170#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/network/server/FileOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="35" column="46" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/network/server/NodeSessionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="754">
+          <caret line="228" column="17" selection-start-line="228" selection-start-column="17" selection-end-line="228" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="119" column="8" selection-start-line="119" selection-start-column="8" selection-end-line="119" selection-end-column="8" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#4;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#2;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#4;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#6;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1464213664786" expanded="false" signature="1427:1452" ph="..." />
+            <marker date="1464213664786" expanded="false" signature="1597:1644" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/websocket.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="668" column="9" selection-start-line="668" selection-start-column="9" selection-end-line="668" selection-end-column="9" />
+        <state relative-caret-position="237">
+          <caret line="165" column="38" selection-start-line="165" selection-start-column="38" selection-end-line="165" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/network/server/NodeWebSocketServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="71" column="27" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/network/server/ChargeUpdater.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="109" column="27" selection-start-line="109" selection-start-column="27" selection-end-line="109" selection-end-column="27" />
+        <state relative-caret-position="968">
+          <caret line="86" column="51" selection-start-line="86" selection-start-column="51" selection-end-line="86" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/network/server/GraphBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#createGraph#0;class#GraphBuilder#0" expanded="false" />
+            <element signature="method#setConnections#0;class#GraphBuilder#0" expanded="false" />
+            <element signature="method#countCoefficients#0;class#GraphBuilder#0" expanded="false" />
           </folding>
         </state>
       </provider>

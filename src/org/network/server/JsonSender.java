@@ -13,7 +13,7 @@ public class JsonSender {
     private static JsonSender jsonSender;
 
     public static JsonSender getJsonSender() {
-        if (jsonSender==null) {
+        if (jsonSender == null) {
             jsonSender = new JsonSender();
         }
         return jsonSender;
@@ -24,7 +24,7 @@ public class JsonSender {
     }
 
     public void setSpeed(String speed) {
-        switch(speed) {
+        switch (speed) {
             case "1":
                 DELAY = 2500;
                 break;
@@ -82,7 +82,7 @@ public class JsonSender {
     }
 
     public void sendAddLinesJson(Node node, String coeffString) throws InterruptedException {
-        sessionHandler.addLines(node,coeffString);
+        sessionHandler.addLines(node, coeffString);
         Thread.sleep(DELAY);
     }
 

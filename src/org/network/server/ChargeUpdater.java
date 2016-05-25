@@ -1,8 +1,10 @@
 package org.network.server;
 
+import org.network.model.Coefficients;
 import org.network.model.Node;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Kapmat on 2016-05-25.
@@ -15,10 +17,17 @@ public class ChargeUpdater implements Runnable {
     private static double teta = 1;
     private static List<Node> neuralList;
     private boolean wasActive = false;
+    private boolean shortDelay = false;
+    private Node currentNode;
 
 
     public ChargeUpdater() {
         jsonSender = JsonSender.getJsonSender();
+    }
+
+    public ChargeUpdater(Node currentNode) {
+        jsonSender = JsonSender.getJsonSender();
+        this.currentNode = currentNode;
     }
 
     public JsonSender getJsonSender() {
@@ -61,22 +70,36 @@ public class ChargeUpdater implements Runnable {
         ChargeUpdater.beta = beta;
     }
 
+    public static void setParameters(String parameters) {
+        String[] paramTable = parameters.split(" ");
+        alfa = Double.valueOf(paramTable[0]);
+        beta = Double.valueOf(paramTable[1]);
+        teta = Double.valueOf(paramTable[2]);
+    }
+
     @Override
     public void run() {
         while(true) {
             try {
-                for (Node neuron: neuralList) {
+//                for (Node neuron: neuralList) {
 //                    if (neuron.getName().equals("IS") || neuron.getName().equals("MONKEY")) {
 
-                        updateChargingLevel(neuron);
-                        jsonSender.sendUpdateChargeLevel(neuron);
+                        updateChargingLevel(currentNode);
+                        jsonSender.sendUpdateChargeLevel(currentNode);
 
-                        if (neuron.getChargingLevel()==-1) {
+                        if (currentNode.getChargingLevel()==-1) {
 //                            Thread.sleep(1000);
                         }
-//                    }
+
+                if (shortDelay) {
+                    Thread.sleep(100);
+                    shortDelay = false;
+                } else {
+                    Thread.sleep(300);
                 }
-                Thread.sleep(100);
+//                if (currentNode.getChargingLevel()==-1) {
+//
+//                }
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -86,8 +109,9 @@ public class ChargeUpdater implements Runnable {
     private void updateChargingLevel(Node node) throws InterruptedException {
         double minusPart = 0;
         double chLevel = 0;
-        System.out.println("ChargingLevel: " + node.getChargingLevel());
-//        System.out.println("Coeff Sum: " + node.getCoeffSum());
+        if (node.getName().equalsIgnoreCase("dog") && node.getChargingLevel()>0) {
+            System.out.println(node.getChargingLevel());
+        }
         if (node.getChargingLevel()<0) {
 //            minusPart = alfa*node.getChargingLevel()+((alfa-1)*beta*Math.pow(node.getChargingLevel(),2))/teta;
 //            System.out.println("MIN <0: " + minusPart);
@@ -106,21 +130,27 @@ public class ChargeUpdater implements Runnable {
 //            System.out.println("MIN >=teta: " + minusPart);
             wasActive = true;
             jsonSender.sendActiveNeuronJson(node, "#00FF33");
-            jsonSender.sendUpdateChargeLevel(node);
-            Thread.sleep(1000);
+            jsonSender.sendUpdateLinesJson(node);
+            jsonSender.sendUpdateSentenceJson(node.getName());
+            jsonSender.sendUpdateChargeLevel(currentNode);
+
+            for (Map.Entry<Node,Coefficients> entry: node.getNeighCoefficient().entrySet()) {
+                entry.getKey().increaseCoeffSum(entry.getValue().getSynapticWeight());
+                entry.getKey().setChargingLevel(entry.getKey().getCoeffSum());
+            }
+
+            Thread.sleep(500);
             chLevel = -1;
-            jsonSender.sendActiveNeuronJson(node, "#BBA2FF");
+            jsonSender.sendActiveNeuronJson(currentNode, "#BBA2FF");
+            shortDelay = true;
         }
 
-        if (node.getChargingLevel()<0 && chLevel>=0 && wasActive) {
+        if (chLevel>=0 && wasActive) {
             wasActive = false;
             jsonSender.sendActiveNeuronJson(node, "#FFF");
         }
 
-//        chLevel = node.getCoeffSum() - minusPart;
-//        System.out.println("ChargingLevel: " + chLevel);
 
-//        System.out.println("Min: " + minusPart);
         node.setChargingLevel(chLevel);
 
         if(node.getChargingLevel()!=0.0) {
