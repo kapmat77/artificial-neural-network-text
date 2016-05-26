@@ -1,17 +1,15 @@
 package org.network.server;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.enterprise.context.ApplicationScoped;
 import javax.json.JsonObject;
 import javax.json.spi.JsonProvider;
 import javax.websocket.Session;
+
+import org.network.model.Coefficients;
 import org.network.model.Node;
 
 /**
@@ -184,20 +182,28 @@ public class NodeSessionHandler {
 	}
 	
 	private void addLinesJson(Node node, String coeffString) {
-		JsonProvider provider = JsonProvider.provider();
-		JsonObject updateNode = provider.createObjectBuilder()
-				.add("action", "addLines")
-				.add("id", node.getId())
-				.add("level", node.getLevel())
-				.add("name", node.getName())
-				.add("neighbours", node.getNeighboursAsString())
-				.add("coeff", node.getCoeffAsString())
-				.add("distance", node.getId()*20)
-//				.add("coeff", "")
-				.build();
-		System.out.println(node.getNeighboursAsString());
-		System.out.println(node.getCoeffAsString());
-		sendToAllConnectedSessions(updateNode);
+		for (Map.Entry<Node, Coefficients> entry : node.getNeighCoefficient().entrySet()) {
+//		for(Node singleNeigh: node.getAllowedNodes()) {
+			double distance = 0;
+			if (entry.getValue().getSynapticWeight()==0 && entry.getKey().getNeighCoefficient().containsKey(node)) {
+				distance = entry.getKey().getNeighCoefficient().get(node).getSynapticWeight();
+			} else {
+				distance = entry.getValue().getSynapticWeight();
+			}
+			JsonProvider provider = JsonProvider.provider();
+			JsonObject updateNode = provider.createObjectBuilder()
+					.add("action", "addLines")
+					.add("id", node.getId())
+					.add("level", node.getLevel())
+					.add("name", node.getName())
+					.add("neighbours", " " + entry.getKey().getName())
+					.add("coeff", " " + String.valueOf(ClockUpdater.roundDouble(600-(distance*500))))
+					.add("distance", String.valueOf(ClockUpdater.roundDouble(600-(distance*500))))
+					.build();
+//			System.out.println("Node '" + node.getName() + "' to '" + entry.getKey().getName() + "' - distance: " + String.valueOf(ClockUpdater.roundDouble(600-(distance*500))));
+//			System.out.println("Coeff " + ClockUpdater.roundDouble(distance));
+			sendToAllConnectedSessions(updateNode);
+		}
 	}
 	
 	private void updateNodeJson(Node node) {

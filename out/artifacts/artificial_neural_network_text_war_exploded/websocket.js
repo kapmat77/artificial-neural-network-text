@@ -49,14 +49,14 @@ function refresh() {
         .nodes(nodes)
         .links(links)
         .size([width, height])
+        // .linkDistance(function(d) { return  d.distance; })
+        // .linkStrength(1)
         .linkDistance(200)
-        .linkStrength(0.001)
-        //		.linkStrength(0.1)
+        .linkStrength(0.01)
         //		.theta(0)
-        .charge(-15)
-        //        .charge(0)
-        .gravity(0.0001)
-        //		.gravity(0.002)
+        .charge(-100)
+        .gravity(0.0)
+        //		.gravity(0.0001)
         .on('tick', tick);
 
     restart("add");
@@ -169,7 +169,7 @@ function updateParameters() {
 
 function printNodeElement(node) {
     nodes.push(
-        {id: node.id, name: node.name, level: node.level, chargeLevel: node.chargeLevel}
+        {id: node.id, name: node.name, level: node.level, chargeLevel: node.chargeLevel, distance: node.distance}
     );
 
     restart("add");
@@ -205,7 +205,8 @@ function printAddLines(node) {
                     target: lookup[neigh[i]],
                     coeff: coeff[i],
                     left: false,
-                    right: true
+                    right: true,
+                    distance: currentNode.distance
                 }
             );
             restart("addLine", lookup[node.name].name + lookup[neigh[i]].name)
