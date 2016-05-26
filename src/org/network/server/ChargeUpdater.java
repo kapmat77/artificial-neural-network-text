@@ -131,7 +131,7 @@ public class ChargeUpdater implements Runnable {
             wasActive = true;
             jsonSender.sendActiveNeuronJson(node, "#00FF33");
             jsonSender.sendUpdateLinesJson(node);
-            jsonSender.sendUpdateSentenceJson(node.getName() + " " + ClockUpdater.getTime());
+            jsonSender.sendUpdateSentenceJson(node.getName());
             jsonSender.sendUpdateChargeLevel(currentNode);
 
             for (Map.Entry<Node,Coefficients> entry: node.getNeighCoefficient().entrySet()) {

@@ -15,7 +15,7 @@ public class ClockUpdater implements Runnable {
     }
 
     public static double getTime() {
-        return roundDouble(clock);
+        return roundDouble(clock/Math.pow(10,9));
     }
 
     public static void zeroTime() {
@@ -40,13 +40,13 @@ public class ClockUpdater implements Runnable {
 
     @Override
     public void run() {
-        clock = 0;
+        long startTime = System.nanoTime();
         while(activeClock) {
-            clock = clock + 0.01;
-//            System.out.println("Clock: " + roundDouble(clock));
-            jsonSender.sendUpdateTimerJson(roundDouble(clock));
+            clock = System.nanoTime() - startTime;
+//            System.out.println("CLOCK: " +roundDouble(clock/Math.pow(10,9)));
+            jsonSender.sendUpdateTimerJson(roundDouble(clock/Math.pow(10,9)));
             try {
-                Thread.sleep(10);
+                Thread.sleep(20);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
