@@ -46,7 +46,7 @@ public class ClockUpdater implements Runnable {
 //            System.out.println("Clock: " + roundDouble(clock));
             jsonSender.sendUpdateTimerJson(roundDouble(clock));
             try {
-                Thread.sleep(9);
+                Thread.sleep(10);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

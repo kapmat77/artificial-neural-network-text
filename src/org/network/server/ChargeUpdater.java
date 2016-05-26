@@ -95,7 +95,7 @@ public class ChargeUpdater implements Runnable {
                     Thread.sleep(100);
                     shortDelay = false;
                 } else {
-                    Thread.sleep(300);
+                    Thread.sleep(600);
                 }
 //                if (currentNode.getChargingLevel()==-1) {
 //
@@ -131,7 +131,7 @@ public class ChargeUpdater implements Runnable {
             wasActive = true;
             jsonSender.sendActiveNeuronJson(node, "#00FF33");
             jsonSender.sendUpdateLinesJson(node);
-            jsonSender.sendUpdateSentenceJson(node.getName());
+            jsonSender.sendUpdateSentenceJson(node.getName() + " " + ClockUpdater.getTime());
             jsonSender.sendUpdateChargeLevel(currentNode);
 
             for (Map.Entry<Node,Coefficients> entry: node.getNeighCoefficient().entrySet()) {
@@ -147,6 +147,10 @@ public class ChargeUpdater implements Runnable {
 
         if (chLevel>=0 && wasActive) {
             wasActive = false;
+            jsonSender.sendActiveNeuronJson(node, "#FFF");
+        } else if (chLevel>0.01 && !wasActive) {
+            jsonSender.sendActiveNeuronJson(node, "#AEFFB0");
+        } else if (chLevel<0.01 && chLevel>-0.01) {
             jsonSender.sendActiveNeuronJson(node, "#FFF");
         }
 

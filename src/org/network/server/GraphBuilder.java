@@ -40,6 +40,21 @@ public class GraphBuilder {
 
         jsonSender = JsonSender.getJsonSender();
 
+        if (data.equals("resetAll")) {
+            for (int i = 0; i < chargeThreads.length; i++) {
+                chargeThreads[i].stop();
+            }
+            for (Node node: neuralList) {
+                node.setChargingLevel(0);
+                node.setCoeffSum(0);
+                jsonSender.sendUpdateChargeLevel(node);
+            }
+            sessionHandler.resetNodes();
+            sessionHandler.resetLines();
+            jsonSender.sendAddSentenceJson(" ");
+            chargeThreads = null;
+        }
+
         if (data.equals("killChargeThread")) {
             for (int i = 0; i < chargeThreads.length; i++) {
                 chargeThreads[i].stop();
@@ -61,6 +76,25 @@ public class GraphBuilder {
 
             Thread.sleep(100);
 
+            if (chargeThreads == null) {
+                System.out.println("Hello Threads");
+                Runnable[] runChargeUpdaters = new Runnable[neuralList.size()];
+                chargeThreads = new Thread[neuralList.size()];
+
+                for (int i = 0; i < runChargeUpdaters.length; i++) {
+                    runChargeUpdaters[i] = new ChargeUpdater(neuralList.get(i));
+                }
+
+                for (int i = 0; i < runChargeUpdaters.length; i++) {
+                    chargeThreads[i] = new Thread(runChargeUpdaters[i]);
+                }
+
+                for (int i = 0; i < runChargeUpdaters.length; i++) {
+                    chargeThreads[i].start();
+                }
+            }
+
+
             //TODO i do aktualizacji czasu na stronie www
             Runnable runClock = new ClockUpdater();
             Thread clockThread = new Thread(runClock);
@@ -73,6 +107,12 @@ public class GraphBuilder {
                     activeNeurons[i] = activeNeurons[i].replace("-", "").replace(",", ".");
                     Thread.sleep((int) ((Double.valueOf(activeNeurons[i])) * 1000));
                 } else {
+                    for (Node node: neuralList) {
+                        if (node.getName().equalsIgnoreCase(activeNeurons[i])) {
+                            jsonSender.sendUpdateSentenceJson("#");
+                            break;
+                        }
+                    }
                     findNodes(activeNeurons[i], sessionHandler, true);
                 }
             }
@@ -99,22 +139,7 @@ public class GraphBuilder {
 
             time = ClockUpdater.getTime();
 
-            if (chargeThreads == null) {
-                Runnable[] runChargeUpdaters = new Runnable[neuralList.size()];
-                chargeThreads = new Thread[neuralList.size()];
 
-                for (int i = 0; i < runChargeUpdaters.length; i++) {
-                    runChargeUpdaters[i] = new ChargeUpdater(neuralList.get(i));
-                }
-
-                for (int i = 0; i < runChargeUpdaters.length; i++) {
-                    chargeThreads[i] = new Thread(runChargeUpdaters[i]);
-                }
-
-                for (int i = 0; i < runChargeUpdaters.length; i++) {
-                    chargeThreads[i].start();
-                }
-            }
 
 //			if (!chargeThread.isAlive()) {
 //				chargeThread.start();

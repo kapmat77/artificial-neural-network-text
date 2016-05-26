@@ -78,6 +78,7 @@ public class NodeWebSocketServer {
 					break;
 				case "resetLines":
 					sessionHandler.resetLines();
+					graphBuilder.buildGraph("resetAll", null, sessionHandler, null);
 			}
 		}
 	}

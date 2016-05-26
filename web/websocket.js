@@ -21,7 +21,7 @@ var radius = 40;
 
 // set up SVG for D3
 var width = window.screen.availWidth - 290,
-    height = window.screen.availHeight - 112;
+    height = window.screen.availHeight - 82;
 var svg = d3.select('body')
     .append('svg')
     .attr('width', width)
@@ -53,9 +53,9 @@ function refresh() {
         .linkStrength(0.001)
         //		.linkStrength(0.1)
         //		.theta(0)
-        .charge(-8)
+        .charge(-15)
         //        .charge(0)
-        .gravity(0.0003)
+        .gravity(0.0001)
         //		.gravity(0.002)
         .on('tick', tick);
 
@@ -257,10 +257,15 @@ function printAddWordToSentence(word) {
 
     var sentenceName = document.createElement("span");
     sentenceName.setAttribute("class", "sentenceName");
-    sentenceName.innerHTML = word.name + " / ";
+    if (word.name!=="#") {
+        sentenceName.innerHTML = word.name + " / ";
+        sentenceName.style.color = "black";
+    } else {
+        sentenceName.innerHTML = word.name;
+        sentenceName.style.color = "red";
+    }
     sentenceName.style.fontSize = "11px";
     sentenceName.style.fontFamily = "Tahoma";
-    sentenceName.style.color = "black";
     sentenceName.className = "animationSentence";
     sentenceDiv.appendChild(sentenceName);
 }
