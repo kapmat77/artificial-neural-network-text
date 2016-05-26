@@ -100,14 +100,6 @@ public class JsonSender {
         Thread.sleep(DELAY);
     }
 
-    public void sendStartTmerJson(Node node) throws InterruptedException {
-        sessionHandler.updateBestLine(node);
-    }
-
-    public void sendStopTmerJson(Node node) throws InterruptedException {
-        sessionHandler.updateBestLine(node);
-    }
-
     public void sendUpdateTimerJson(double clock) {
         sessionHandler.updateTimer(clock);
     }

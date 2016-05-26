@@ -25,6 +25,7 @@ public class NodeSessionHandler {
 	private int sentenceId = 1000;
 	private final Set sessions = new HashSet<>();
 	private final Set nodes = new LinkedHashSet<>();
+	private static final int DISTANCE = 300;
 	
 	public void addSession(Session session) {
 		sessions.add(session);
@@ -64,6 +65,7 @@ public class NodeSessionHandler {
 				.add("id", node.getId())
 				.add("level", node.getLevel())
 				.add("name", node.getName())
+				.add("distance", 0)
 				.add("neighbours", node.getAnotherNeighboursAsString())
 //				.add("coeff", "0") //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 				.build();
@@ -74,6 +76,7 @@ public class NodeSessionHandler {
 		JsonProvider provider = JsonProvider.provider();
 		JsonObject updateNode = provider.createObjectBuilder()
 				.add("action", "resetLines")
+				.add("distance", 0)
 				.build();
 		sendToAllConnectedSessions(updateNode);
 	}
@@ -82,6 +85,7 @@ public class NodeSessionHandler {
 		JsonProvider provider = JsonProvider.provider();
 		JsonObject updateNode = provider.createObjectBuilder()
 				.add("action", "resetNodes")
+				.add("distance", 0)
 				.build();
 		sendToAllConnectedSessions(updateNode);
 	}
@@ -94,6 +98,7 @@ public class NodeSessionHandler {
 				.add("level", node.getLevel())
 				.add("name", node.getName())
 				.add("neighbours", node.getStringBestNeighbour())
+				.add("distance", 0)
 //				.add("coeff", "0") //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 				.build();
 		sendToAllConnectedSessions(updateNode);
@@ -107,6 +112,7 @@ public class NodeSessionHandler {
 				.add("level", node.getLevel())
 				.add("name", node.getName())
 				.add("color", color)
+				.add("distance", 0)
 				.build();
 		sendToAllConnectedSessions(sentenceAddMsg);
 	}
@@ -126,6 +132,7 @@ public class NodeSessionHandler {
 				.add("action", "updateSentence")
 				.add("id", sentenceId)
 				.add("name", word)
+				.add("distance", 0)
 				.build();
 		sendToAllConnectedSessions(sentenceAddMsg);
 	}
@@ -135,6 +142,7 @@ public class NodeSessionHandler {
 		JsonObject sentenceAddMsg = provider.createObjectBuilder()
 				.add("action", "removeSentence")
 				.add("id", sentenceId)
+				.add("distance", 0)
 				.build();
 //		sentenceId++;
 		sendToAllConnectedSessions(sentenceAddMsg);
@@ -147,6 +155,7 @@ public class NodeSessionHandler {
 				.add("action", "addSentence")
 				.add("id", sentenceId)
 				.add("name", sentence)
+				.add("distance", 0)
 				.build();
 		sendToAllConnectedSessions(sentenceAddMsg);
 	}
@@ -169,6 +178,7 @@ public class NodeSessionHandler {
 				.add("name", node.getName())
 				.add("neighbours", node.getNeighboursAsString())
 				.add("chargeLevel", node.getChargingLevel())
+				.add("distance", 0)
 				.build();
 		return addNode;
 	}
@@ -182,6 +192,7 @@ public class NodeSessionHandler {
 				.add("name", node.getName())
 				.add("neighbours", node.getNeighboursAsString())
 				.add("coeff", node.getCoeffAsString())
+				.add("distance", node.getId()*20)
 //				.add("coeff", "")
 				.build();
 		System.out.println(node.getNeighboursAsString());
@@ -197,6 +208,7 @@ public class NodeSessionHandler {
 				.add("level", node.getLevel())
 				.add("name", node.getName())
 				.add("chargeLevel", node.getChargingLevel())
+				.add("distance", 0)
 				.build();
 		sendToAllConnectedSessions(updateMessage);
 	}
@@ -213,6 +225,7 @@ public class NodeSessionHandler {
 				.add("level", node.getLevel())
 				.add("name", node.getName())
 				.add("chargeLevel", ClockUpdater.roundDouble(node.getChargingLevel()))
+				.add("distance", 0)
 				.build();
 		sendToAllConnectedSessions(updateMessage);
 	}
@@ -222,6 +235,7 @@ public class NodeSessionHandler {
 		JsonObject updateMessage = provider.createObjectBuilder()
 				.add("action", "updateTimer")
 				.add("clock", clock)
+				.add("distance", 0)
 				.build();
 		sendToAllConnectedSessions(updateMessage);
 	}
