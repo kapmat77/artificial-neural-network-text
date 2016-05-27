@@ -162,8 +162,9 @@ public class GraphBuilder {
         if (firstNode) {
 //			if(neuron.getCoeffSum()>=1) {
             neuron.setCoeffSum(ChargeUpdater.getTeta());
-            neuron.setChargingLevel(neuron.getCoeffSum());
+            neuron.setChargingLevel(neuron.getCoeffSum()+1.01);
             jsonSender.sendActiveNeuronJson(neuron, "#00FF33");
+            neuron.setChargingLevel(neuron.getCoeffSum());
 //				jsonSender.sendUpdateSentenceJson(neuron.getName());
             jsonSender.sendUpdateChargeLevel(neuron);
 //			}

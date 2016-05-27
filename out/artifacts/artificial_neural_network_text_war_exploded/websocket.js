@@ -49,12 +49,13 @@ function refresh() {
         .nodes(nodes)
         .links(links)
         .size([width, height])
+            //TODO zmienić aby odległości między węzłami odpowiadały wagom między tymi węzłami
         // .linkDistance(function(d) { return  d.distance; })
         // .linkStrength(1)
         .linkDistance(200)
         .linkStrength(0.01)
         //		.theta(0)
-        .charge(-100)
+        .charge(-80)
         .gravity(0.0)
         //		.gravity(0.0001)
         .on('tick', tick);

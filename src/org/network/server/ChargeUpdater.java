@@ -95,7 +95,7 @@ public class ChargeUpdater implements Runnable {
                     Thread.sleep(100);
                     shortDelay = false;
                 } else {
-                    Thread.sleep(600);
+                    Thread.sleep(100);
                 }
 //                if (currentNode.getChargingLevel()==-1) {
 //
@@ -109,9 +109,7 @@ public class ChargeUpdater implements Runnable {
     private void updateChargingLevel(Node node) throws InterruptedException {
         double minusPart = 0;
         double chLevel = 0;
-        if (node.getName().equalsIgnoreCase("dog") && node.getChargingLevel()>0) {
-            System.out.println(node.getChargingLevel());
-        }
+
         if (node.getChargingLevel()<0) {
 //            minusPart = alfa*node.getChargingLevel()+((alfa-1)*beta*Math.pow(node.getChargingLevel(),2))/teta;
 //            System.out.println("MIN <0: " + minusPart);

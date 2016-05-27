@@ -55,7 +55,7 @@ function refresh() {
         .linkDistance(200)
         .linkStrength(0.01)
         //		.theta(0)
-        .charge(-100)
+        .charge(-80)
         .gravity(0.0)
         //		.gravity(0.0001)
         .on('tick', tick);
